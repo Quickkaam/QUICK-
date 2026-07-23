@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7KWH63TV0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q7KWH63TV0');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== DRISHTI KAVACH SDK CONFIG ===== -->
+  <script>
+    window.__DK_API_KEY  = 'dk_fc370748404c447454d76ff96f347075ed1c4930d941e80d';
+    window.__DK_SITE_ID  = '1';
+    window.__DK_API_URL  = 'https://drishti-kavach-backend.onrender.com/api';
+  </script>
+  
+  <!-- ===== FAVICON (Browser Tab Logo) ===== -->
+  <link rel="icon" href="https://quickkaam.in/Images/QK%20WEB.png" type="image/png" sizes="64x64" />
+  <!-- ===== SEO ===== -->
+  <title>Booking Request | QUICK काम – Service Booking Form</title>
+  <meta name="description" content="We don't just build brands; we engineer growth through precision marketing and technical excellence." />
+  
+  <!-- ===== SECURITY HEADERS ===== -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  
+  <!-- ===== OPEN GRAPH / SOCIAL MEDIA PREVIEW ===== -->
+  <meta property="og:title" content="Booking Request | QUICK काम – Engineered Growth Through Precision Marketing" />
+  <meta property="og:description" content="We don't just build brands; we engineer growth through precision marketing and technical excellence." />
+  <meta property="og:image" content="https://quickkaam.in/Images/QK%20WEB.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://quickkaam.in/booking" />
+  <meta property="og:type" content="website" />
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://quickkaam.in/Images/QK%20WEB.png" />
+
+  <!-- ===== UPDATED CSP WITH GOOGLE ALLOWED ===== -->
+  <meta name="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https://api.emailjs.com https://drishti-kavach-backend.onrender.com https://challenges.cloudflare.com https://www.google-analytics.com; frame-src https://challenges.cloudflare.com; frame-ancestors 'none'; upgrade-insecure-requests;" />
+  
+  <meta name="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), bluetooth=(), xr-spatial-tracking=()" />
+  <meta name="X-XSS-Protection" content="1; mode=block" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Booking Request",
+      "description": "We don't just build brands; we engineer growth through precision marketing and technical excellence.",
+      "url": "https://quickkaam.in/booking",
+      "publisher": {
+        "@id": "https://quickkaam.in/#organization"
+      },
+      "mainEntity": {
+        "@type": "ContactPage",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-6202469886",
+          "contactType": "Sales",
+          "availableLanguage": ["English", "Hindi"]
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://quickkaam.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Book Online",
+          "item": "https://quickkaam.in/book-online"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Booking Request",
+          "item": "https://quickkaam.in/booking"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ============================================
+       DARKER GREY SPACE THEME
+       ============================================ */
+    .booking-page-wrapper {
+      background: #1a1d23;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Animated Stars - White */
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .star {
+      position: absolute;
+      background: #d0d5dd;
+      border-radius: 50%;
+      animation: twinkle var(--duration) ease-in-out infinite alternate;
+    }
+    @keyframes twinkle {
+      0% { opacity: 0.1; transform: scale(0.7); }
+      100% { opacity: 0.6; transform: scale(1.1); }
+    }
+
+    /* Shooting Stars - White */
+    .shooting-star {
+      position: fixed;
+      width: 2px;
+      height: 2px;
+      background: #c8cdd5;
+      border-radius: 50%;
+      animation: shoot linear infinite;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .shooting-star::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 1px;
+      background: linear-gradient(to left, rgba(200, 205, 213, 0.4), transparent);
+      right: 100%;
+    }
+    @keyframes shoot {
+      0% {
+        transform: translate(0, 0) rotate(-45deg);
+        opacity: 0;
+      }
+      5% {
+        opacity: 1;
+      }
+      20% {
+        transform: translate(200px, -200px) rotate(-45deg);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    /* Nebula Glow - Darker Grey */
+    .nebula {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(100px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .nebula-1 {
+      width: 400px;
+      height: 400px;
+      background: rgba(100, 110, 125, 0.06);
+      top: -100px;
+      right: -100px;
+    }
+    .nebula-2 {
+      width: 500px;
+      height: 500px;
+      background: rgba(80, 90, 105, 0.04);
+      bottom: -200px;
+      left: -100px;
+    }
+    .nebula-3 {
+      width: 300px;
+      height: 300px;
+      background: rgba(120, 130, 145, 0.03);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* ============================================
+       DARKER GREY SPACE CARD
+       ============================================ */
+    .booking-hero {
+      padding: 60px 0 40px;
+      border-bottom: none;
+      background: transparent;
+      position: relative;
+      z-index: 1;
+    }
+    .booking-hero-inner {
+      text-align: center;
+    }
+    .booking-hero-inner .logo {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .booking-hero-inner .logo-img {
+      height: 100px;
+      width: auto;
+      filter: drop-shadow(0 0 30px rgba(255,255,255,0.03));
+    }
+    .booking-hero-inner h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #f0f2f5;
+      text-shadow: 0 0 40px rgba(255,255,255,0.02);
+    }
+    .booking-hero-inner h1 span {
+      color: #f0f2f5;
+      text-shadow: 0 0 60px rgba(255,255,255,0.03);
+    }
+    .booking-hero-inner p {
+      font-size: 1.1rem;
+      color: #9aa2b0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .booking-form-section {
+      padding: 40px 0 80px;
+      background: transparent;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Darker Grey Glass Space Card */
+    .booking-form-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 24px;
+      padding: 48px 56px;
+      box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 0 80px rgba(255, 255, 255, 0.01);
+      position: relative;
+      overflow: hidden;
+    }
+    .booking-form-wrapper::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.02), transparent, rgba(255,255,255,0.02), transparent);
+      animation: rotate-glow 30s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes rotate-glow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .booking-form-wrapper .form-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #f0f2f5;
+      position: relative;
+      z-index: 1;
+    }
+    .booking-form-wrapper .form-title i {
+      color: #7a8290;
+      margin-right: 8px;
+    }
+    .booking-form-wrapper .form-subtitle {
+      font-size: 0.95rem;
+      color: #7a8290;
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ============================================
+       DARKER GREY FORM STYLES
+       ============================================ */
+    .booking-form .form-group {
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .booking-form label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #9aa2b0;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .booking-form label .required {
+      color: #7a8290;
+      margin-left: 2px;
+    }
+    .booking-form input,
+    .booking-form textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      transition: all 0.4s ease;
+      color: #f0f2f5;
+      backdrop-filter: blur(10px);
+    }
+    .booking-form input::placeholder,
+    .booking-form textarea::placeholder {
+      color: #5a6270;
+    }
+    .booking-form input:focus,
+    .booking-form textarea:focus {
+      outline: none;
+      border-color: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.02), 0 0 40px rgba(255, 255, 255, 0.01);
+    }
+    .booking-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /* Form Row */
+    .booking-form .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* ============================================
+       SERVICE SELECTION BUTTONS - GRID
+       ============================================ */
+    .service-buttons-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .service-btn {
+      padding: 12px 16px;
+      border: 1.5px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.02);
+      color: #9aa2b0;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      position: relative;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .service-btn:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.04);
+      color: #d0d5dd;
+    }
+    .service-btn.selected {
+      border-color: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.08);
+      color: #f0f2f5;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.02);
+    }
+    .service-btn.selected::after {
+      content: '✓';
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      width: 20px;
+      height: 20px;
+      background: #f0f2f5;
+      color: #1a1d23;
+      border-radius: 50%;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .service-btn .icon {
+      font-size: 1rem;
+      opacity: 0.5;
+    }
+    .service-btn.selected .icon {
+      opacity: 1;
+    }
+    .service-btn .badge {
+      font-size: 0.65rem;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2px 8px;
+      border-radius: 12px;
+      color: #7a8290;
+    }
+    .service-btn.selected .badge {
+      background: rgba(255, 255, 255, 0.1);
+      color: #9aa2b0;
+    }
+
+    .selected-count {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #7a8290;
+      margin-top: 10px;
+      padding: 6px 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    .selected-count span {
+      color: #f0f2f5;
+      font-weight: 700;
+    }
+
+    /* Submit Button - Darker Grey */
+    .booking-form .submit-btn {
+      width: 100%;
+      padding: 16px 32px;
+      background: #f0f2f5;
+      color: #1a1d23;
+      border: none;
+      border-radius: 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      letter-spacing: 0.5px;
+    }
+    .booking-form .submit-btn::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 0deg, transparent, rgba(0,0,0,0.03), transparent, rgba(0,0,0,0.03), transparent);
+      animation: rotate-glow 8s linear infinite;
+      pointer-events: none;
+    }
+    .booking-form .submit-btn:hover {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 8px 40px rgba(240, 242, 245, 0.06);
+      background: #ffffff;
+    }
+    .booking-form .submit-btn:active {
+      transform: scale(0.97);
+    }
+    .booking-form .submit-btn i {
+      font-size: 1.1rem;
+      position: relative;
+      z-index: 1;
+    }
+    .booking-form .submit-btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Status Message */
+    #booking-status {
+      display: none;
+      margin: 10px 0;
+      padding: 12px 16px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 0.3s ease;
+    }
+    #booking-status.success {
+      display: block;
+      background: rgba(76, 175, 80, 0.15);
+      color: #4caf50;
+      border: 1px solid rgba(76, 175, 80, 0.3);
+    }
+    #booking-status.error {
+      display: block;
+      background: rgba(255, 0, 0, 0.1);
+      color: #ff6b6b;
+      border: 1px solid rgba(255, 0, 0, 0.2);
+    }
+    #booking-status.info {
+      display: block;
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Copy button in status */
+    #booking-status .copy-btn {
+      margin-top: 8px;
+      padding: 6px 14px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 4px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 12px;
+      transition: all 0.3s ease;
+    }
+    #booking-status .copy-btn:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* Success Message */
+    .success-message {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .success-message.show {
+      display: block;
+    }
+    .success-message i {
+      font-size: 4rem;
+      color: #f0f2f5;
+      margin-bottom: 16px;
+      opacity: 0.6;
+    }
+    .success-message h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #f0f2f5;
+    }
+    .success-message p {
+      color: #7a8290;
+      font-size: 1rem;
+    }
+
+    /* Security Text */
+    .booking-form .security-text {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 0.75rem;
+      color: #5a6270;
+      position: relative;
+      z-index: 1;
+    }
+    .booking-form .security-text i {
+      margin-right: 4px;
+    }
+
+    /* Diamond Button for Success */
+    .diamond-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 28px;
+      background: #f0f2f5;
+      color: #1a1d23;
+      font-weight: 600;
+      font-size: 0.85rem;
+      font-family: 'Inter', sans-serif;
+      text-decoration: none;
+      border: none;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      width: fit-content;
+      margin: 20px auto 0;
+      position: relative;
+      z-index: 1;
+    }
+    .diamond-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(240, 242, 245, 0.04);
+      background: #ffffff;
+    }
+
+    /* Header - Darker Grey */
+    .site-header {
+      background: rgba(26, 29, 35, 0.9) !important;
+      backdrop-filter: blur(12px) !important;
+      border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+    }
+    .site-header .logo-img {
+      filter: drop-shadow(0 0 20px rgba(255,255,255,0.02)) !important;
+    }
+    .nav-links a {
+      color: #7a8290 !important;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #f0f2f5 !important;
+    }
+    .nav-links a::after {
+      background: #f0f2f5 !important;
+    }
+
+    /* Footer - Darker Grey */
+    .site-footer {
+      background: rgba(26, 29, 35, 0.95) !important;
+      border-top: 1px solid rgba(255,255,255,0.04) !important;
+    }
+    .site-footer .logo-img {
+      filter: drop-shadow(0 0 20px rgba(255,255,255,0.02)) !important;
+    }
+    .footer-nav a {
+      color: #5a6270 !important;
+    }
+    .footer-nav a:hover {
+      color: #9aa2b0 !important;
+    }
+    .footer-socials a {
+      color: #5a6270 !important;
+    }
+    .footer-socials a:hover {
+      color: #9aa2b0 !important;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.04) !important;
+    }
+    .footer-bottom p {
+      color: #4a5260 !important;
+    }
+    .footer-tagline {
+      color: #3a4250 !important;
+    }
+
+    /* Float Call Button */
+    .float-call {
+      background: rgba(255, 255, 255, 0.06) !important;
+      color: #f0f2f5 !important;
+      border: 1px solid rgba(255,255,255,0.06) !important;
+    }
+    .float-call:hover {
+      background: #f0f2f5 !important;
+      color: #1a1d23 !important;
+    }
+
+    /* Progress Bar */
+    .progress-bar {
+      background: #f0f2f5 !important;
+    }
+
+    /* Honeypot - Hidden */
+    .honeypot-field {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      opacity: 0;
+      pointer-events: none;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      display: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .booking-form-wrapper {
+        padding: 32px 24px;
+        margin: 0 16px;
+      }
+      .booking-form .form-row {
+        grid-template-columns: 1fr;
+      }
+      .booking-hero-inner h1 {
+        font-size: 2.2rem;
+      }
+      .booking-hero-inner .logo-img {
+        height: 70px;
+      }
+      .nebula-1,
+      .nebula-2 {
+        width: 200px;
+        height: 200px;
+      }
+      .service-buttons-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .service-btn {
+        padding: 10px 14px;
+        font-size: 0.8rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .booking-form-wrapper {
+        padding: 24px 16px;
+        margin: 0 12px;
+        border-radius: 16px;
+      }
+      .booking-hero-inner h1 {
+        font-size: 1.8rem;
+      }
+      .booking-form .submit-btn {
+        padding: 14px 20px;
+        font-size: 0.9rem;
+      }
+      .service-buttons-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+      }
+      .service-btn {
+        padding: 8px 12px;
+        font-size: 0.75rem;
+      }
+      .service-btn .badge {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="booking-page-wrapper">
+
+    <div class="stars" id="starsContainer"></div>
+    
+    <div class="shooting-star" style="top: 10%; left: 20%; animation-duration: 8s; animation-delay: 0s;"></div>
+    <div class="shooting-star" style="top: 30%; left: 70%; animation-duration: 10s; animation-delay: 4s;"></div>
+    <div class="shooting-star" style="top: 60%; left: 10%; animation-duration: 7s; animation-delay: 2s;"></div>
+    <div class="shooting-star" style="top: 80%; left: 80%; animation-duration: 12s; animation-delay: 6s;"></div>
+    
+    <div class="nebula nebula-1"></div>
+    <div class="nebula nebula-2"></div>
+    <div class="nebula nebula-3"></div>
+
+    <!-- Removed unused cursor-dot and cursor-ring -->
+    <div class="progress-bar"></div>
+    <a href="tel:+916202469886" class="float-call float-call-1" aria-label="Call Quick Kaam - 6202469886"><i class="fas fa-phone-alt"></i></a>
+  <a href="tel:+919229884148" class="float-call float-call-2" aria-label="Call Quick Kaam - 9229884148"><i class="fas fa-phone-alt"></i></a>
+
+    <header class="site-header">
+      <div class="container navbar">
+        <a href="/" class="logo click-animate">
+          <img src="Images/white%20qk.png" alt="Quick Kaam Logo" class="logo-img" style="height: 100px;">
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-hamburger">
+          <span></span><span></span><span></span>
+        </label>
+        <nav class="nav-links" id="nav-menu" aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/services">Services</a>
+          <a href="/brand-building">Brand Building</a>
+          <a href="/book-online">Book a Service</a>
+          <a href="/contact" class="active" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="booking-hero">
+        <div class="container">
+          <div class="booking-hero-inner slide-right">
+            <a href="/" class="logo">
+              <img src="Images/white%20qk.png" alt="Quick Kaam Logo" class="logo-img">
+            </a>
+            <h1 class="click-animate">Book Your <span>Service</span></h1>
+            <p>Fill in the details below and we'll get back to you within 24 hours.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking-form-section" id="booking-section">
+        <div class="container">
+          <div class="booking-form-wrapper slide-right">
+
+            <div id="bookingFormContainer">
+              <h2 class="form-title"><i class="fas fa-rocket"></i> Service Booking Request</h2>
+              <p class="form-subtitle">Launch your project with us — we're ready for takeoff.</p>
+
+              <form class="booking-form" id="bookingForm" method="POST">
+                
+                <input type="text" id="honeypot-booking" name="honeypot" class="honeypot-field" aria-hidden="true" tabindex="-1" autocomplete="off" />
+
+                <div class="form-group">
+                  <label for="name">Name / Organization <span class="required">*</span></label>
+                  <input type="text" id="name" name="name" placeholder="Enter your name or organization name" required autocomplete="organization" />
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="phone">Contact Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="+91 XXXXXXXXXX" required autocomplete="tel" />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Select Services <span class="required">*</span></label>
+                  <div class="service-buttons-grid" id="serviceButtons">
+                    <button type="button" class="service-btn" data-value="Brand Building">
+                      <span class="icon">🏗️</span> Brand Building
+                    </button>
+                    <button type="button" class="service-btn" data-value="Political PR Services">
+                      <span class="icon">🏛️</span> Political PR
+                    </button>
+                    <button type="button" class="service-btn" data-value="Growth Architecture">
+                      <span class="icon">📊</span> Growth Architecture
+                    </button>
+                    <button type="button" class="service-btn" data-value="Web Designing, Development & Cyber Security">
+                      <span class="icon">🛡️</span> Web Design &amp; Security
+                    </button>
+                    <button type="button" class="service-btn" data-value="Legal Advisor">
+                      <span class="icon">⚖️</span> Legal Advisor
+                    </button>
+                    <button type="button" class="service-btn" data-value="360° Marketing">
+                      <span class="icon">📢</span> 360° Marketing
+                    </button>
+                    <button type="button" class="service-btn" data-value="SEO Services">
+                      <span class="icon">📈</span> SEO Services
+                    </button>
+                    <button type="button" class="service-btn" data-value="Graphic Designing">
+                      <span class="icon">🎨</span> Graphic Designing
+                    </button>
+                    <button type="button" class="service-btn" data-value="Content Writing">
+                      <span class="icon">✍️</span> Content Writing
+                    </button>
+                    <button type="button" class="service-btn" data-value="Event Planning">
+                      <span class="icon">🎪</span> Event Planning
+                    </button>
+                  </div>
+                  <input type="hidden" id="selectedServices" name="services" value="" />
+                  <div class="selected-count" id="selectedCount">Selected: <span id="countDisplay">0</span> service(s)</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message / Requirements</label>
+                  <textarea id="message" name="message" placeholder="Tell us about your project, goals, or any specific requirements..."></textarea>
+                </div>
+
+                <div id="booking-status"></div>
+
+                <!-- Cloudflare Turnstile Widget -->
+                <div id="turnstile-widget-booking" style="margin: 20px 0; min-height: 65px; display: flex; justify-content: center;"></div>
+
+                <button type="submit" class="submit-btn" id="booking-submit-btn">
+                  <i class="fas fa-paper-plane"></i>
+                  <span>Send Booking Request</span>
+                </button>
+
+                <p class="security-text">
+                  <i class="fas fa-lock"></i> Your information is secure and will not be shared.
+                </p>
+              </form>
+            </div>
+
+            <div class="success-message" id="successMessage">
+              <i class="fas fa-check-circle"></i>
+              <h3>Booking Request Sent!</h3>
+              <p>Thank you for choosing Quick Kaam. We'll get back to you within 24 hours.</p>
+              <a href="/" class="diamond-btn" onclick="if (typeof track === 'function') track('cta_click', { button: 'Back to Home - Booking Success' });">
+                <i class="fas fa-home"></i> Back to Home
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a href="/" class="logo">
+          <img src="Images/white%20qk.png" alt="Quick Kaam Logo" class="logo-img" style="height: 70px;">
+        </a>
+        <nav class="footer-nav">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/services">Services</a>
+          <a href="/brand-building">Brand Building</a>
+          <a href="/book-online">Book a Service</a>
+          <a href="/contact">Contact</a>
+        </nav>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/share/185EmjX7TJ/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/quickkaam" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/QUICKKAAM" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/quick-%E0%A4%95%E0%A4%BE%E0%A4%AE" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>+91 62024 69886 &nbsp;|&nbsp; contactquickkaam@gmail.com  </p>
+        <p class="footer-tagline">Accelerate Your Business Growth</p>
+        <p>© 2026 QUICK काम. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+
+   <script src="common.js?v=2" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // ============================================================
+      // BOOKING PAGE LOGIC (Using Centralized Email Sender)
+      // ============================================================
+
+      // EmailJS credentials (Service/Template IDs are non-sensitive)
+      const SERVICE_ID = 'service_4dc83hi';
+      const TEMPLATE_ID = 'template_0v8zr48';
+
+      // ===== GENERATE STARS =====
+      const starsContainer = document.getElementById('starsContainer');
+      if (starsContainer) {
+        const starCount = 300;
+        for (let i = 0; i < starCount; i++) {
+          const star = document.createElement('div');
+          star.className = 'star';
+          const size = Math.random() * 3 + 1;
+          star.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;top:${Math.random()*100}%;--duration:${Math.random()*4+2}s;animation-delay:${Math.random()*6}s;opacity:${Math.random()*0.4+0.05};`;
+          starsContainer.appendChild(star);
+        }
+      }
+
+      // ===== SLIDE RIGHT OBSERVER =====
+      document.querySelectorAll('.slide-right').forEach(el => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        observer.observe(el);
+      });
+
+      // ===== SERVICE BUTTONS =====
+      const serviceButtons = document.querySelectorAll('.service-btn');
+      const hiddenInput = document.getElementById('selectedServices');
+      const countDisplay = document.getElementById('countDisplay');
+
+      function updateSelectedServices() {
+        const selected = [];
+        serviceButtons.forEach(btn => {
+          if (btn.classList.contains('selected')) selected.push(btn.dataset.value);
+        });
+        hiddenInput.value = selected.join(', ');
+        countDisplay.textContent = selected.length;
+      }
+
+      serviceButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          this.classList.toggle('selected');
+          updateSelectedServices();
+        });
+      });
+
+      // Pre-select from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceParam = urlParams.get('service');
+      if (serviceParam) {
+        const decoded = decodeURIComponent(serviceParam);
+        serviceButtons.forEach(btn => {
+          if (btn.dataset.value === decoded) btn.classList.add('selected');
+        });
+        updateSelectedServices();
+      }
+
+      // ===== FORM HANDLER =====
+      const form = document.getElementById('bookingForm');
+      const btn = document.getElementById('booking-submit-btn');
+      const statusDiv = document.getElementById('booking-status');
+      let turnstileWidgetId = null;
+
+      let submitAttempts = 0;
+      const MAX_ATTEMPTS = 3;
+
+      // Initialize Turnstile widget
+      (async function() {
+        try {
+          turnstileWidgetId = await renderTurnstileWidget('turnstile-widget-booking', 'auto', 'normal');
+          if (!turnstileWidgetId) {
+            console.warn('Turnstile widget failed to initialize');
+          }
+        } catch (error) {
+          console.error('Turnstile initialization error:', error);
+        }
+      })();
+
+      // Real-time validation
+      document.querySelectorAll('#bookingForm .form-group input, #bookingForm .form-group textarea').forEach(field => {
+        field.addEventListener('blur', function() {
+          if (this.hasAttribute('required') && !this.value.trim()) {
+            this.style.borderColor = '#ff6b6b';
+          } else if (this.type === 'email' && this.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value.trim())) {
+            this.style.borderColor = '#ff6b6b';
+          } else {
+            this.style.borderColor = '';
+          }
+        });
+        field.addEventListener('input', function() {
+          if (this.style.borderColor === '#ff6b6b' && this.value.trim()) {
+            if (this.type === 'email' && this.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value.trim())) {
+              return;
+            }
+            this.style.borderColor = '';
+          }
+        });
+      });
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Honeypot (client-side check)
+        const honeypot = document.getElementById('honeypot-booking');
+        if (honeypot && honeypot.value && honeypot.value.trim() !== '') {
+          window.location.href = '/404.html';
+          return;
+        }
+
+        // Rate limiting (UI only)
+        submitAttempts++;
+        if (submitAttempts > MAX_ATTEMPTS) {
+          statusDiv.className = 'error';
+          statusDiv.textContent = '⚠️ Too many attempts. Please try again later.';
+          statusDiv.style.display = 'block';
+          btn.disabled = true;
+          setTimeout(() => {
+            btn.disabled = false;
+            statusDiv.style.display = 'none';
+            submitAttempts = 0;
+          }, 60000);
+          return;
+        }
+
+        // Collect data
+        const name = document.getElementById('name').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const services = document.getElementById('selectedServices').value;
+        const message = document.getElementById('message').value.trim();
+
+        // Validate
+        if (!name || !phone || !email || !services) {
+          statusDiv.className = 'error';
+          statusDiv.textContent = '⚠️ Please fill in all required fields and select at least one service.';
+          statusDiv.style.display = 'block';
+          document.querySelectorAll('#bookingForm [required]').forEach(field => {
+            if (!field.value.trim()) {
+              field.style.borderColor = '#ff6b6b';
+              setTimeout(() => { field.style.borderColor = ''; }, 3000);
+            }
+          });
+          return;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          statusDiv.className = 'error';
+          statusDiv.textContent = '⚠️ Please enter a valid email address.';
+          statusDiv.style.display = 'block';
+          document.getElementById('email').style.borderColor = '#ff6b6b';
+          setTimeout(() => { document.getElementById('email').style.borderColor = ''; }, 3000);
+          return;
+        }
+
+        // Sanitize
+        const cleanName = name.replace(/[<>]/g, '').slice(0, 100);
+        const cleanMessage = message.replace(/<[^>]*>/g, '').slice(0, 5000);
+
+        const templateParams = {
+          name: cleanName,
+          phone: phone,
+          email: email,
+          services: services,
+          message: cleanMessage || 'No additional requirements',
+        };
+
+        // UI: sending
+        btn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> <span>Sending...</span>';
+        btn.disabled = true;
+        statusDiv.style.display = 'none';
+
+        // 🔐 Send via centralized secure EmailJS handler with Turnstile
+        sendEmailJS(SERVICE_ID, TEMPLATE_ID, templateParams, turnstileWidgetId)
+          .then(function(response) {
+            statusDiv.className = 'success';
+            statusDiv.textContent = '✅ Booking request sent! We\'ll get back to you within 24 hours.';
+            statusDiv.style.display = 'block';
+            btn.innerHTML = '<i class="fas fa-check"></i> <span>Sent!</span>';
+            btn.style.background = '#333';
+            btn.style.color = '#fff';
+
+            form.reset();
+            document.querySelectorAll('.service-btn').forEach(b => b.classList.remove('selected'));
+            document.getElementById('selectedServices').value = '';
+            document.getElementById('countDisplay').textContent = '0';
+            
+            // Reset Turnstile widget
+            if (window.turnstile && turnstileWidgetId) {
+              window.turnstile.reset(turnstileWidgetId);
+            }
+            submitAttempts = 0;
+
+            // Optional: Log to backend (gracefully fails if backend is down)
+            if (typeof submitForm === 'function') {
+              submitForm('booking', {
+                name: cleanName, email: email, phone: phone,
+                services: services, message: cleanMessage || 'No additional requirements'
+              });
+            }
+
+            setTimeout(() => {
+              btn.innerHTML = '<i class="fas fa-paper-plane"></i> <span>Send Booking Request</span>';
+              btn.disabled = false;
+              btn.style.background = '';
+              btn.style.color = '';
+              statusDiv.style.display = 'none';
+              statusDiv.className = '';
+            }, 8000);
+          })
+          .catch(function(error) {
+            statusDiv.className = 'error';
+            statusDiv.textContent = error.message.includes('Turnstile') ? 
+              '⚠️ Please complete the security verification.' : 
+              '❌ Failed to send. Please try again later.';
+            statusDiv.style.display = 'block';
+            btn.innerHTML = '<i class="fas fa-paper-plane"></i> <span>Send Booking Request</span>';
+            btn.disabled = false;
+            btn.style.background = '';
+            btn.style.color = '';
+            
+            // Reset Turnstile widget on error
+            if (window.turnstile && turnstileWidgetId) {
+              window.turnstile.reset(turnstileWidgetId);
+            }
+            console.error('EmailJS error:', error);
+          });
+      });
+
+      // Prevent double submission
+      form.addEventListener('submit', function(e) {
+        if (btn.disabled) {
+          e.preventDefault();
+          return false;
+        }
+      });
+
+      // Track section view
+      const bookingSection = document.getElementById('booking-section');
+      if (bookingSection) {
+        const sectionObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              if (typeof track === 'function') {
+                track('section_view', { section: 'booking_form' });
+              }
+              sectionObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+        sectionObserver.observe(bookingSection);
+      }
+    });
+  </script>
+</body>
+</html>

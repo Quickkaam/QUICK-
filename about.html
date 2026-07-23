@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7KWH63TV0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q7KWH63TV0');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== DRISHTI KAVACH SDK CONFIG ===== -->
+  <script>
+    window.__DK_API_KEY  = 'dk_fc370748404c447454d76ff96f347075ed1c4930d941e80d';
+    window.__DK_SITE_ID  = '1';
+    window.__DK_API_URL  = 'https://drishti-kavach-backend.onrender.com/api';
+  </script>
+  
+  <!-- ===== FAVICON ===== -->
+  <link rel="icon" href="https://quickkaam.in/Images/QK%20WEB.png" type="image/png" sizes="64x64" />
+  <!-- ===== SEO ===== -->
+  <title>QUICK काम | About Us – Digital Marketing & Branding Agency</title>
+  <meta name="description" content="We don't just build brands; we engineer growth through precision marketing and technical excellence." />
+  
+  <!-- ===== SECURITY HEADERS ===== -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  
+  <!-- ===== OPEN GRAPH / SOCIAL MEDIA PREVIEW ===== -->
+  <meta property="og:title" content="QUICK काम | About Us – Engineered Growth Through Precision Marketing" />
+  <meta property="og:description" content="We don't just build brands; we engineer growth through precision marketing and technical excellence." />
+  <meta property="og:image" content="https://quickkaam.in/Images/QK%20WEB.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://quickkaam.in/about" />
+  <meta property="og:type" content="website" />
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://quickkaam.in/Images/QK%20WEB.png" />
+
+  <!-- ===== UPDATED CSP WITH GOOGLE ALLOWED ===== -->
+  <meta name="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https://api.emailjs.com https://api.countapi.xyz https://www.google-analytics.com; frame-ancestors 'none'; upgrade-insecure-requests;" />
+  
+  <meta name="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), bluetooth=(), xr-spatial-tracking=()" />
+  <meta name="X-XSS-Protection" content="1; mode=block" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "name": "About QUICK काम",
+      "description": "We don't just build brands; we engineer growth through precision marketing and technical excellence.",
+      "url": "https://quickkaam.in/about",
+      "publisher": {
+        "@id": "https://quickkaam.in/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://quickkaam.in/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://quickkaam.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://quickkaam.in/about"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ===== LOCAL OVERRIDES & FIXES ===== */
+
+    .mission-logo-wrapper {
+      position: absolute;
+      bottom: -1em;
+      right: 0em;
+      z-index: 6;
+      transition: transform 0.3s ease;
+    }
+    .mission-logo-wrapper:hover {
+      transform: scale(1.1) rotate(-5deg);
+    }
+    .mission-logo-wrapper img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+      display: block;
+    }
+
+    .m-chip {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      width: 140px;
+      height: 80px;
+      object-fit: contain;
+      opacity: 0.9;
+      z-index: 7;
+      transition: opacity 0.3s;
+    }
+    .m-chip:hover {
+      opacity: 1;
+    }
+
+    .m-master.one,
+    .m-master.two {
+      display: none !important;
+    }
+
+    .founder-grid {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .founder-image-placeholder {
+      flex-shrink: 0;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 3px solid #000;
+      overflow: hidden;
+      background: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: #ccc;
+      transform: translate3d(0px, 0px, 50px);
+      transition: all 0.5s ease-in-out;
+    }
+    .founder-image-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 35% center; 
+    }
+
+    .why-choose .container {
+      max-width: 1500px;
+      padding-left: 60px;
+      padding-right: 40px;
+    }
+
+    .team-member:nth-child(2) { transition-delay: 0.1s; }
+    .team-member:nth-child(3) { transition-delay: 0.2s; }
+    .team-member:nth-child(4) { transition-delay: 0.3s; }
+    .team-member:nth-child(5) { transition-delay: 0.4s; }
+
+    .notebook-page:nth-child(2) { transition-delay: 0.15s; }
+    .notebook-page:nth-child(3) { transition-delay: 0.30s; }
+    .notebook-page:nth-child(4) { transition-delay: 0.45s; }
+
+    .curved-card h3 {
+      margin-top: 0.25em;
+    }
+
+    @media (max-width: 768px) {
+      .mission-logo-wrapper img {
+        width: 70px;
+        height: 70px;
+      }
+      .mission-logo-wrapper {
+        bottom: -1em;
+        right: -0.5em;
+      }
+      .m-chip {
+        width: 60px;
+        height: 60px;
+        bottom: 8px;
+        right: 8px;
+      }
+      .why-choose .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .founder-image-placeholder {
+        width: 120px;
+        height: 120px;
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .mission-logo-wrapper img {
+        width: 60px;
+        height: 60px;
+      }
+      .m-chip {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .founder-content {
+      transform-style: preserve-3d;
+      flex: 1;
+      min-width: min(100%, 300px);
+    }
+
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .footer-bottom p {
+      margin: 4px 0;
+    }
+
+    .cta-sketch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .team-photo-placeholder i,
+    .founder-image-placeholder i {
+      font-size: inherit;
+    }
+
+    /* ============================================================ */
+    /* ===== TEAM CARD – LAYERING: BLUR → MELT → TEXT =====         */
+    /* ============================================================ */
+
+    .team-member {
+      position: relative;
+      overflow: hidden;
+      min-height: 280px;
+      border-radius: 12px;
+      background: #0a0a0a; /* fallback */
+    }
+
+    /* LAYER 1: BLURRED BACKGROUND – FULL CARD */
+    .team-member .bottom-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;          /* ← FULL CARD */
+      object-fit: cover;
+      filter: blur(4px);
+      -webkit-filter: blur(4px);
+      transform: scale(1.05);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* LAYER 2: MELT EFFECT – FULLY OPAQUE */
+    .team-member .melt-effect {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 1;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* LAYER 3: PROFILE PHOTO + TEXT */
+    .team-member .team-photo-placeholder {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    .team-member .team-photo-placeholder img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #000 !important;   /* black border */
+      box-shadow: 0 0 20px rgba(255,255,255,0.05);
+    }
+
+    /* TEXT – black */
+    .team-member h4 {
+      color: #000000 !important;
+      text-shadow: 0 1px 4px rgba(255,255,255,0.5);
+    }
+    .team-member span {
+      color: #000000 !important;
+      text-shadow: 0 1px 4px rgba(255,255,255,0.5);
+    }
+
+    /* ===== HOVER OVERLAY ===== */
+    .team-member .hover-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: inherit;
+      overflow: hidden;
+      background: rgba(0,0,0,0.15);
+    }
+
+    .team-member:hover .hover-overlay {
+      opacity: 1;
+    }
+
+    .team-member .hover-bg-gif {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .team-member .hover-logo {
+      position: relative;
+      z-index: 2;
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 20px rgba(255,255,255,0.3));
+      opacity: 0;
+      transition: opacity 0.5s ease 0.1s;
+    }
+
+    .team-member:hover .hover-logo {
+      opacity: 1;
+    }
+
+    /* Hide placeholder + text on hover */
+    .team-member:hover .team-photo-placeholder,
+    .team-member:hover h4,
+    .team-member:hover span {
+      display: none;
+    }
+
+    .team-member .team-photo-placeholder,
+    .team-member h4,
+    .team-member span {
+      position: relative;
+      z-index: 2;
+    }
+
+    .team-member:hover {
+      min-height: 280px;
+    }
+    /* ============================================
+   MOBILE FIXES FOR ABOUT PAGE
+   ============================================ */
+
+/* 1. FOUNDER 3D CARD – Reduce border & disable 3D on mobile */
+@media (max-width: 768px) {
+  .parent .card {
+    border-width: 2px !important;
+    transform: none !important;
+    background-position: 0 0 !important;
+  }
+  .parent .card:hover {
+    transform: none !important;
+  }
+  .content-box {
+    padding: 30px 16px 16px 16px !important;
+    border-top-width: 2px !important;
+  }
+  .date-box {
+    width: 60px !important;
+    height: 60px !important;
+    top: 12px !important;
+    right: 12px !important;
+    padding: 6px !important;
+  }
+  .date-box .date {
+    font-size: 18px !important;
+  }
+  .date-box .month {
+    font-size: 10px !important;
+  }
+}
+
+/* 2. CORE TEAM IMAGE PLACEHOLDER – Center and adjust position */
+@media (max-width: 768px) {
+  .team-grid-5 .team-member {
+    min-height: auto !important;
+    padding: 20px 12px 16px !important;
+  }
+  .team-grid-5 .team-member .team-photo-placeholder {
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 12px !important; /* center horizontally and add bottom margin */
+    position: relative;
+    top: 0 !important; /* override any offset */
+  }
+  .team-grid-5 .team-member .team-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  /* Fix text alignment */
+  .team-grid-5 .team-member h4 {
+    font-size: 0.9rem !important;
+    text-align: center;
+  }
+  .team-grid-5 .team-member span {
+    font-size: 0.7rem !important;
+    text-align: center;
+    display: block;
+  }
+  /* Remove any top margin that might push image up */
+  .team-grid-5 .team-member .melt-effect {
+    top: 0 !important;
+  }
+}
+
+/* Extra small devices (phones, 480px and below) */
+@media (max-width: 480px) {
+  .team-grid-5 .team-member .team-photo-placeholder {
+    width: 65px !important;
+    height: 65px !important;
+    margin: 0 auto 10px !important;
+  }
+  .team-grid-5 .team-member {
+    padding: 14px 8px 12px !important;
+  }
+  .team-grid-5 .team-member h4 {
+    font-size: 0.8rem !important;
+  }
+  .team-grid-5 .team-member span {
+    font-size: 0.6rem !important;
+  }
+}
+/* --- Desktop Adjustments --- */
+.date-box .month {
+  font-size: 11px !important;  /* Controls "EST." size on desktop */
+  letter-spacing: 1px;
+}
+
+.date-box .date {
+  font-size: 24px !important;  /* Controls "2026" size on desktop */
+}
+
+/* --- Mobile Adjustments (Phones & Tablets) --- */
+@media (max-width: 768px) {
+  .date-box .month {
+    font-size: 9px !important;   /* Shrinks "EST." further on mobile */
+  }
+  .date-box .date {
+    font-size: 14px !important;  /* Shrinks "2026" further on mobile */
+  }
+}
+
+  </style>
+</head>
+<body>
+  <!-- ===== PROGRESS, CALL BUTTON (removed unused cursors) ===== -->
+  <div class="progress-bar"></div>
+  <a href="tel:+916202469886" class="float-call float-call-1" aria-label="Call Quick Kaam - 6202469886"><i class="fas fa-phone-alt"></i></a>
+  <a href="tel:+919229884148" class="float-call float-call-2" aria-label="Call Quick Kaam - 9229884148"><i class="fas fa-phone-alt"></i></a>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="/" class="logo click-animate">
+        <img src="Images/qk%20logo.png" alt="Quick Kaam Logo" class="logo-img" />
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-hamburger">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="nav-links" id="nav-menu" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/about" class="active" aria-current="page">About</a>
+        <a href="/services">Services</a>
+        <a href="/brand-building">Brand Building</a>
+        <a href="/book-online">Book a Service</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== SECTION 1: ABOUT HERO ===== -->
+    <section class="about-hero">
+      <div class="container about-grid">
+        <div class="about-main slide-right">
+          <span class="section-label">Who We Are</span>
+          <h1 class="click-animate">About Us</h1>
+          <p>Welcome to <strong>Quick Kaam</strong> — a modern digital solutions and creative media platform dedicated to helping businesses, brands, and individuals grow through innovative digital services.</p>
+          <p style="margin-top:16px;">At Quick Kaam, we believe in delivering fast, smart, and result-driven solutions. From digital marketing, branding, content creation, social media management, graphic designing, website solutions, political campaign strategy, to media production. we help turn ideas into impactful results.</p>
+          <p style="margin-top:16px;">Under strong leadership and a passionate team, Quick Kaam continues to work toward innovation, professionalism, and excellence in every project we deliver.</p>
+        </div>
+        <div class="about-side slide-right">
+          <div style="margin: 40px 0; display: flex; justify-content: center;">
+            <div class="mission-container">
+              <div class="m-border">
+                <div class="m-card">
+                  <div class="m-shadow">
+                    <div class="m-content">
+                      <p class="m-rev">Our Solutions</p>
+                      <div class="mission-inner-text">
+                        <p class="m-quote">&ldquo;Smart Solutions, Fast Execution.&rdquo;</p>
+                        <p class="m-desc">We focus on creativity, technology, and strategic communication to build strong brand visibility and meaningful engagement.</p>
+                        <div class="m-details">
+                          <p><strong>Founded:</strong>2026</p>
+                          <p><strong>Phone:</strong> <a href="tel:+91 6202469886">+91 62024 69886</a></p>
+                          <p><strong>Email:</strong> <a href="mailto:contactquickkaam@gmail.com">contactquickkaam@gmail.com</a></p>
+                        </div>
+                      </div>
+                      <div class="mission-logo-wrapper">
+                        <img src="Images/white%20qk.png" alt="Quick Kaam Logo" />
+                      </div>
+                      <img src="Images/only%20QK.png" alt="Quick Kaam Icon" class="m-chip" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 2: FOUNDER ===== -->
+    <section class="founder-section">
+      <div class="container">
+        <span class="section-label">Founders &amp; Leadership</span>
+        <h2 class="section-title">The Vision Behind Quick Kaam</h2>
+        <div class="founder-grid">
+          <div class="parent slide-right">
+            <div class="card">
+              <div class="content-box">
+                <div style="display: flex; gap: 30px; align-items: flex-start; transform-style: preserve-3d; flex-wrap: wrap;">
+                  <div class="founder-image-placeholder">
+                    <img src="Images/founder.jpeg" alt="Sobhit Mishra – Founder of Quick Kaam" />
+                  </div>
+                  <div class="founder-content">
+                    <h3 class="card-title">Sobhit Mishra</h3>
+                    <div class="card-content">
+                      <p><strong>Founder & Director &mdash; Quick Kaam</strong></p>
+                      <p>
+                        Sobhit is the visionary behind Quick Kaam.
+
+                        Sobhit brings extensive expertise in media strategy, digital communication, political branding, content production, and creative storytelling. With his years of experience in media management and strategic communication, he plays a pivotal role in shaping the organization’s creative direction and driving its growth.
+                      </p>
+                      <p>
+                       He is dedicated to empowering brands and businesses by delivering powerful media, innovative ideas, and an impactful digital presence.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="date-box">
+                <span class="month">EST.</span>
+                <span class="date">2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3: CORE TEAM – FULL CARD BG + MELT + BLACK TEXT ===== -->
+    <section class="team-section">
+      <div class="container">
+        <span class="section-label">The People Behind the Work</span>
+        <h2 class="section-title">Our Core Team</h2>
+      </div>
+      <div class="team-water">
+        <div class="team-grid-5">
+          <!-- Team Member 1 -->
+          <div class="team-member slide-right">
+            <!-- FULL CARD BLURRED BACKGROUND -->
+            <img src="Images/media advisor.webp" class="bottom-bg" alt="" />
+            <!-- MELT EFFECT -->
+            <img src="Images/melt.png" alt="" class="melt-effect" aria-hidden="true" />
+            <!-- HOVER OVERLAY -->
+            <div class="hover-overlay">
+              <img src="Images/m.gif" alt="Background" class="hover-bg-gif" />
+              <img src="Images/white%20qk.png" alt="Quick Kaam Logo" class="hover-logo" />
+            </div>
+            <!-- PROFILE + TEXT -->
+            <div class="team-photo-placeholder">
+              <img src="Images/founderc.jpeg" alt="Sobhit Mishra" />
+            </div>
+            <h4>Sobhit Kumar Mishra</h4>
+            <span>Director &amp; Media Adivisor</span>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="team-member slide-right">
+            <img src="Images/web+cyber.png" class="bottom-bg" alt="" />
+            <img src="Images/melt.png" alt="" class="melt-effect" aria-hidden="true" />
+            <div class="hover-overlay">
+              <img src="Images/m.gif" alt="Background" class="hover-bg-gif" />
+              <img src="Images/white%20qk.png" alt="Quick Kaam Logo" class="hover-logo" />
+            </div>
+            <div class="team-photo-placeholder">
+              <img src="Images/WhiteHatWolfc.jpeg" alt="Giridhar Pai" />
+            </div>
+            <h4>Giridhar Pai</h4>
+            <span>Head of Cyber Security &amp; Senior Web Developer</span>
+          </div>
+          <!-- Team Member 4 -->
+          <div class="team-member slide-right">
+            <img src="Images/hr and manager.jpg" class="bottom-bg" alt="" />
+            <img src="Images/melt.png" alt="" class="melt-effect" aria-hidden="true" />
+            <div class="hover-overlay">
+              <img src="Images/m.gif" alt="Background" class="hover-bg-gif" />
+              <img src="Images/white%20qk.png" alt="Quick Kaam Logo" class="hover-logo" />
+            </div>
+            <div class="team-photo-placeholder">
+              <img src="Images/ronakc.jpeg" alt="Rounak Kumar" />
+            </div>
+            <h4>Rounak Kumar</h4>
+            <span>Manager &amp; HR Head</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTIONS 4–7 ===== -->
+    <section class="what-we-do">
+      <div class="container">
+        <span class="section-label">Our Compass</span>
+        <h2 class="section-title">Mission &amp; Vision</h2>
+        <div class="services-mini-grid">
+          <div class="curved-card slide-right sctech-stroke">
+            <i class="fas fa-bullseye" aria-hidden="true"></i>
+            <h3>Mission</h3>
+            <p>At Quick Kaam, our mission is to empower businesses, brands, and individuals through innovative digital solutions, creative storytelling, and strategic marketing. We are committed to delivering fast, effective, and result-driven services that help our clients build a strong digital presence, maximize growth, and achieve long-term success.</p>
+          </div>
+          <div class="curved-card slide-right sctech-stroke">
+            <i class="fas fa-eye" aria-hidden="true"></i>
+            <h3>Vision</h3>
+            <p>Our vision is to become a trusted leader in digital innovation and media solutions by transforming ideas into impactful experiences. We aspire to redefine modern marketing through creativity, technology, and smart strategies, helping brands grow with confidence in an ever-evolving digital world.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline-section">
+      <div class="container">
+        <span class="section-label">How Far We&rsquo;ve Come</span>
+        <h2 class="section-title">Our Journey</h2>
+        <div class="timeline-grid">
+          <div class="timeline-card slide-right">
+            <span class="year">2025</span>
+            <h4>Foundation &amp; Vision</h4>
+            <p>Quick Kaam began its journey with a clear vision to transform digital solutions through creativity, innovation, and smart execution. From the start, our focus has been on delivering impactful, result-driven services that help businesses grow.</p>
+          </div>
+          <div class="timeline-card slide-right">
+            <span class="year">2026</span>
+            <h4>Growth &amp; Future Expansion</h4>
+            <p>Quick Kaam continues to expand its creative and technical capabilities, offering innovative solutions in branding, media production, website development, and digital marketing — becoming a trusted leader in digital media.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose">
+      <div class="container">
+        <span class="section-label">Why Us</span>
+        <h2 class="section-title">Why Choose QuickKaam?</h2>
+        <br>
+        <p class="section-sub slide-right">
+          At Quick Kaam, we combine creativity, technology, and strategy to deliver smart digital solutions that help businesses grow faster and stand out in a competitive world.
+        </p>
+        <div class="why-grid-row">
+          <div class="notebook-page slide-right">
+            <div class="spiral-binding">
+              <div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
+              <div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
+            </div>
+            <div class="page-content sketch-art-card sctech-stroke">
+              <i class="fas fa-rocket" aria-hidden="true"></i>
+              <h4>Fast &amp; Result-Driven Solutions</h4>
+              <p>We focus on delivering effective and timely solutions designed to maximize growth, engagement, and business success from day one.</p>
+            </div>
+          </div>
+          <div class="notebook-page slide-right">
+            <div class="spiral-binding">
+              <div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
+              <div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
+            </div>
+            <div class="page-content sketch-art-card sctech-stroke">
+              <i class="fas fa-lightbulb" aria-hidden="true"></i>
+              <h4>Creative &amp; Strategic Approach</h4>
+              <p>Our team blends innovation with strategy to create impactful branding, marketing campaigns, and media solutions tailored to your goals, while maintaining strong client relationships through regular reporting</p>
+            </div>
+          </div>
+          <div class="notebook-page slide-right">
+            <div class="spiral-binding">
+              <div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
+              <div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
+            </div>
+            <div class="page-content sketch-art-card sctech-stroke">
+              <i class="fas fa-medal" aria-hidden="true"></i>
+              <h4>Premium Quality Execution</h4>
+              <p>Every project is handled with precision, creativity, and attention to detail, ensuring professional results that reflect your brand identity.</p>
+            </div>
+          </div>
+          <div class="notebook-page slide-right">
+            <div class="spiral-binding">
+              <div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
+              <div class="hole"></div><div class="hole"></div><div class="hole"></div><div class="hole"></div>
+            </div>
+            <div class="page-content sketch-art-card sctech-stroke">
+              <i class="fas fa-handshake" aria-hidden="true"></i>
+              <h4>Transparent &amp; Trusted Process</h4>
+              <p>We believe in clear communication, reliable support, and complete transparency so you stay informed at every stage of the journey, with every project backed by a professional legal contract.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-cta">
+      <div class="container">
+        <div class="cta-box slide-right">
+          <div class="cta-content">
+            <h2>Ready to accelerate your growth?</h2>
+            <p>Let&rsquo;s build something impactful together.</p>
+            <!-- 🔵 [TRACKER ADDED] Safe track call -->
+            <a href="/contact" class="btn" onclick="if (typeof track === 'function') track('cta_click', { button: 'GET STARTED - About Page' });">
+              <strong>GET STARTED</strong>
+              <div id="container-stars"><div id="stars"></div></div>
+              <div id="glow"><div class="circle"></div><div class="circle"></div></div>
+            </a>
+          </div>
+          <div class="cta-sketch">
+            <div class="myRocket">
+              <div class="rocket">
+                <svg width="63px" height="63px" viewBox="0 0 63 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+                  <g id="07---Migration" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Artboard" transform="translate(-333.000000, -59.000000)" fill-rule="nonzero">
+                      <g id="Group-3" transform="translate(370.500000, 84.000000) rotate(45.000000) translate(-370.500000, -84.000000) translate(350.000000, 49.000000)">
+                        <path d="M20.2611213,56.0890909 C28.6271974,56.1343694 36.1052102,61.3169003 39.0847576,69.1345455 C42.4407841,60.7158107 39.7979614,51.0923198 32.6129695,45.5683811 C25.4279776,40.0444424 15.4485201,39.9637187 8.17510817,45.3707038 C0.901696259,50.7776888 -1.89645886,60.3571677 1.32293946,68.8290909 C4.41291985,61.0902174 11.9283451,56.0344777 20.2611213,56.0890909 L20.2611213,56.0890909 Z" id="Path" fill="#555555"></path>
+                        <path d="M25.5938485,42.0636364 L25.4793031,56.8145455 C31.7130116,58.5286368 36.7624212,63.100974 39.0847576,69.1345455 C41.2204407,63.7700463 40.9690926,57.7496734 38.3936896,52.5818602 C35.8182867,47.414047 31.1628598,43.5884665 25.5938485,42.0636364 L25.5938485,42.0636364 Z" id="Path" fill="#777777"></path>
+                        <path d="M20.2611213,58.7236364 C22.6864496,58.7410546 25.0946463,59.131689 27.4011213,59.8818182 C31.1258204,52.0689936 33.0358631,43.5151348 32.988394,34.86 C33.1156667,19.6763636 28.1265758,6.50363636 20.7447576,9.59232693e-14 C13.2738485,6.36363636 8.01748491,19.4727273 7.94112127,34.6563636 C7.74703936,43.30931 9.51357931,51.893998 13.108394,59.7672727 C15.4242539,59.0513022 17.8372349,58.6992302 20.2611213,58.7236364 Z" id="Path" fill="#999999"></path>
+                        <path d="M20.7574849,9.9475983e-14 C20.7574849,9.9475983e-14 20.7574849,9.9475983e-14 20.7574849,9.9475983e-14 L20.2611213,58.7236364 L20.2611213,58.7236364 C22.6864496,58.7410546 25.0946463,59.131689 27.4011213,59.8818182 C31.1258204,52.0689936 33.0358631,43.5151348 32.988394,34.86 C33.128394,19.6763636 28.1393031,6.50363636 20.7574849,9.9475983e-14 Z" id="Path" fill="#666666"></path>
+                        <path d="M20.6429395,14.3436364 C23.7993031,14.3436364 26.8793031,14.5090909 29.8829395,14.7381818 C28.1402402,9.13105528 24.9999744,4.05932897 20.7574849,-3.64153152e-14 C16.4333667,3.9882607 13.196447,9.01227556 11.3520304,14.5981818 C14.4065758,14.42 17.4993031,14.3436364 20.6429395,14.3436364 Z" id="Path" fill="#888888"></path>
+                        <path d="M20.6938485,0.0636363636 L20.5793031,14.3436364 L20.5793031,14.3436364 C23.7356667,14.3436364 26.8156667,14.5090909 29.8193031,14.7381818 C28.0947898,9.13766584 24.9768116,4.066572 20.7574849,-3.64153152e-14 C20.7303627,0.01433912 20.7081877,0.0365141744 20.6938485,0.0636363636 Z" id="Path" fill="#777777"></path>
+                        <path d="M20.4393031,40.1163636 C18.8229395,42.7890909 17.6774849,48.2490909 17.6265758,54.5490909 C17.5756667,60.8490909 18.6320304,66.3345455 20.1720304,69.0327273 C21.788394,66.36 22.9338485,60.9127273 22.9847576,54.6 C23.0356667,48.2872727 22.0047576,42.8145455 20.4393031,40.1163636 Z" id="Path" fill="#555555"></path>
+                        <path d="M20.3629395,40.2436364 L20.1338485,68.9054545 C20.1338485,68.9054545 20.1338485,68.9945455 20.1974849,69.0327273 C21.8138485,66.36 22.9593031,60.9127273 23.0102122,54.6 C23.0611213,48.2872727 22.0047576,42.8145455 20.4647576,40.1163636 L20.3629395,40.2436364 Z" id="Path" fill="#666666"></path>
+                        <path d="M20.4774849,34.7073799 C16.5905548,34.6790558 13.4624304,31.5052378 13.4905795,27.6183072 C13.5187286,23.7313766 16.6924921,20.6031969 20.5794232,20.6312782 C24.4663543,20.6593595 27.5945894,23.8330684 27.5665758,27.72 C27.5315765,31.6041674 24.3617521,34.7284647 20.4774849,34.7073799 Z" id="Path" fill="#666666"></path>
+                        <path d="M20.5793031,22.8327273 C17.8802575,22.8117234 15.6752064,24.9826759 15.6541476,27.6817211 C15.6330888,30.3807663 17.8039964,32.5858615 20.5030412,32.6069752 C23.202086,32.628089 25.4072253,30.4572262 25.4284629,27.7581818 C25.4425464,25.06183 23.2755469,22.8607046 20.5793031,22.8327273 L20.5793031,22.8327273 Z" id="Path" fill="#EEEEEE"></path>
+                        <path d="M25.428394,27.7581818 C25.4419599,26.4609745 24.9378815,25.2118688 24.0277615,24.2874162 C23.1176415,23.3629636 21.8765641,22.8394306 20.5793031,22.8327273 L20.5029395,22.8327273 L20.4265758,32.6073417 L20.5029395,32.6073417 C23.1992912,32.6214251 25.4004167,30.4544256 25.428394,27.7581818 L25.428394,27.7581818 Z" id="Path" fill="#CCCCCC"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div class="star star1"></div>
+              <div class="star star2"></div>
+              <div class="star star3"></div>
+              <div class="star star4"></div>
+              <div class="star star5"></div>
+              <div class="star star6"></div>
+              <div class="star star7"></div>
+              <div class="star star8"></div>
+              <div class="star star9"></div>
+              <div class="star star10"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="/" class="logo">
+        <img src="Images/white%20qk.png" alt="Quick Kaam Logo" class="logo-img" />
+      </a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/brand-building">Brand Building</a>
+        <a href="/book-online">Book a Service</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/share/185EmjX7TJ/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/quickkaam" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://x.com/QUICKKAAM" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/company/quick-%E0%A4%95%E0%A4%BE%E0%A4%AE" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>+91 62024 69886 &nbsp;|&nbsp; contactquickkaam@gmail.com</p>
+      <p class="footer-tagline">Accelerate Your Business Growth</p>
+      <p>&copy; 2026 QUICK काम. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="common.js?v=2" defer></script>
+
+  <!-- 🔵 [TRACKER ADDED] - Safe tracking for mission card view -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const missionCard = document.querySelector('.mission-container');
+      if (missionCard) {
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              if (typeof track === 'function') {
+                track('section_view', { section: 'mission_card' });
+              }
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.3 });
+        observer.observe(missionCard);
+      }
+    });
+  </script>
+</body>
+</html>

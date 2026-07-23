@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7KWH63TV0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q7KWH63TV0');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== DRISHTI KAVACH SDK CONFIG ===== -->
+  <script>
+    window.__DK_API_KEY  = 'dk_fc370748404c447454d76ff96f347075ed1c4930d941e80d';
+    window.__DK_SITE_ID  = '1';
+    window.__DK_API_URL  = 'https://drishti-kavach-backend.onrender.com/api';
+  </script>
+  
+  <!-- ===== FAVICON (Browser Tab Logo) ===== -->
+  <link rel="icon" href="https://quickkaam.in/Images/QK%20WEB.png" type="image/png" sizes="64x64" />
+  <!-- ===== SEO ===== -->
+  <title>Contact Us | QUICK काम – Digital Marketing & Branding Agency</title>
+  <meta name="description" content="We don't just build brands; we engineer growth through precision marketing and technical excellence." />
+  
+  <!-- ===== SECURITY HEADERS ===== -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  
+  <!-- ===== OPEN GRAPH / SOCIAL MEDIA PREVIEW ===== -->
+  <meta property="og:title" content="Contact Us | QUICK काम – Engineered Growth Through Precision Marketing" />
+  <meta property="og:description" content="We don't just build brands; we engineer growth through precision marketing and technical excellence." />
+  <meta property="og:image" content="https://quickkaam.in/Images/QK%20WEB.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://quickkaam.in/contact" />
+  <meta property="og:type" content="website" />
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://quickkaam.in/Images/QK%20WEB.png" />
+
+  <!-- ===== UPDATED CSP WITH GOOGLE ALLOWED ===== -->
+  <meta name="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https://api.emailjs.com https://drishti-kavach-backend.onrender.com https://challenges.cloudflare.com https://www.google-analytics.com; frame-src https://challenges.cloudflare.com; frame-ancestors 'none'; upgrade-insecure-requests;" />
+  
+  <meta name="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), bluetooth=(), xr-spatial-tracking=()" />
+  <meta name="X-XSS-Protection" content="1; mode=block" />
+
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "name": "Contact Us",
+      "description": "We don't just build brands; we engineer growth through precision marketing and technical excellence.",
+      "url": "https://quickkaam.in/contact",
+      "publisher": {
+        "@id": "https://quickkaam.in/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://quickkaam.in/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://quickkaam.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://quickkaam.in/contact"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  
+  <style>
+    .honeypot-field {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      opacity: 0;
+      pointer-events: none;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      display: none;
+    }
+    #form-status {
+      display: none;
+      margin-top: 12px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      width: 100%;
+      text-align: center;
+      animation: fadeIn 0.3s ease;
+    }
+    #form-status.success {
+      display: block;
+      background: rgba(76, 175, 80, 0.15);
+      color: #4caf50;
+      border: 1px solid rgba(76, 175, 80, 0.3);
+    }
+    #form-status.error {
+      display: block;
+      background: rgba(255, 0, 0, 0.1);
+      color: #ff6b6b;
+      border: 1px solid rgba(255, 0, 0, 0.2);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Removed unused cursor-dot and cursor-ring -->
+  <div class="progress-bar"></div>
+  <a href="tel:+916202469886" class="float-call float-call-1" aria-label="Call Quick Kaam - 6202469886"><i class="fas fa-phone-alt"></i></a>
+  <a href="tel:+919229884148" class="float-call float-call-2" aria-label="Call Quick Kaam - 9229884148"><i class="fas fa-phone-alt"></i></a>
+
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="/" class="logo click-animate">
+        <img src="Images/qk%20logo.png" alt="Quick Kaam Logo" class="logo-img">
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav class="nav-links" id="nav-menu" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/brand-building">Brand Building</a>
+        <a href="/book-online">Book a Service</a>
+        <a href="/contact" class="active" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-hero" id="contact-section">
+      <div class="container contact-grid">
+        <div class="contact-info-col slide-right">
+          <span class="section-label">Reach Out</span>
+          <h1 class="click-animate">Get in Touch</h1>
+          <p style="font-size:1.05rem; color:#444; margin-bottom:32px; line-height:1.7;">Ready to accelerate your growth? Reach out to our creative team for a strategy session.</p>
+          <div class="contact-detail">
+            <strong><i class="fas fa-envelope" style="width:20px;"></i> Email</strong>
+            <p><a href="mailto:contactquickkaam@gmail.com" onclick="if (typeof track === 'function') track('contact_link_click', { type: 'email', target: 'contact' });">contactquickkaam@gmail.com</a></p>
+          </div>
+          <div class="contact-detail">
+            <strong><i class="fas fa-phone" style="width:20px;"></i> Phone</strong>
+            <p>
+              <a href="tel:+91 6202469886" onclick="if (typeof track === 'function') track('contact_link_click', { type: 'phone', number: '+91 6202469886' });">+91 62024 69886</a>
+              <br>
+              <a href="tel:" onclick="if (typeof track === 'function') track('contact_link_click', { type: 'phone', number: '' });"></a>
+            </p>
+          </div>
+          <div class="contact-detail">
+            <strong><i class="fas fa-map-marker-alt" style="width:20px;"></i> Location</strong>
+            <p>Azad Path, Gali number 3, Chandmari Road<br>Kankarbagh, Patna, Bihar - 800020</p>
+          </div>
+          <div class="contact-detail">
+            <strong><i class="fas fa-share-alt" style="width:20px;"></i> Social</strong>
+            <div class="contact-socials">
+              <a href="https://www.facebook.com/share/185EmjX7TJ/" target="_blank" rel="noopener noreferrer" onclick="if (typeof track === 'function') track('social_click', { platform: 'facebook' });"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/quickkaam" target="_blank" rel="noopener noreferrer" onclick="if (typeof track === 'function') track('social_click', { platform: 'instagram' });"><i class="fab fa-instagram"></i></a>
+              <a href="https://x.com/QUICKKAAM" target="_blank" rel="noopener noreferrer" onclick="if (typeof track === 'function') track('social_click', { platform: 'twitter' });"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://www.linkedin.com/company/quick-%E0%A4%95%E0%A4%BE%E0%A4%AE" target="_blank" rel="noopener noreferrer" onclick="if (typeof track === 'function') track('social_click', { platform: 'linkedin' });"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <p>For any queries: <a href="mailto:supportquickkaam@gmail.com" onclick="if (typeof track === 'function') track('contact_link_click', { type: 'email', target: 'support' });">supportquickkaam@gmail.com</a></p>   
+          </div>
+          <div style="font-family:'Caveat',cursive; font-size:1.35rem; margin-top:32px; color:#444; font-weight:500; line-height:1.4;">Every monumental breakthrough begins with a simple conversation. Let's co-author your brand's success story.</div>
+        </div>
+
+        <div class="contact-form-col slide-right" style="background:transparent; border:none; padding:0; display:flex; justify-content:center; align-items:center;">
+          <div class="form-container">
+            <form class="form" id="contact-form-new" method="POST">
+              <div class="form-panel">
+                <div class="form-details">Send a Message</div>
+                <div style="display:flex; gap:1em; flex-wrap:wrap; width:100%;">
+                  <input class="input" type="text" placeholder="First Name" id="first-name-new" required style="flex:1; min-width:120px;" autocomplete="given-name" />
+                  <input class="input" type="text" placeholder="Last Name" id="last-name-new" required style="flex:1; min-width:120px;" autocomplete="family-name" />
+                </div>
+                <input class="input" type="email" placeholder="Email Address" id="email-field-new" required autocomplete="email" />
+                <input class="input" type="tel" placeholder="Phone Number" id="phone-field-new" autocomplete="tel" />
+                <textarea class="input" rows="3" placeholder="Tell us about your project..." id="message-field-new" required style="resize:vertical; min-height:80px; padding:10px 14px;"></textarea>
+                <input type="text" id="honeypot-contact" name="honeypot" class="honeypot-field" aria-hidden="true" tabindex="-1" autocomplete="off" />
+                
+                <!-- Cloudflare Turnstile Widget -->
+                <div id="turnstile-widget-contact" style="margin: 15px 0; min-height: 65px; display: flex; justify-content: center;"></div>
+                
+                <button class="btn" type="submit" id="submit-btn">Send <i class="fas fa-arrow-right"></i></button>
+                <div id="form-status"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="/" class="logo">
+        <img src="Images/white%20qk.png" alt="Quick Kaam Logo" class="logo-img">
+      </a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/brand-building">Brand Building</a>
+        <a href="/book-online">Book a Service</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/share/185EmjX7TJ/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/quickkaam" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/QUICKKAAM" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/quick-%E0%A4%95%E0%A4%BE%E0%A4%AE" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>+91 62024 69886 &nbsp;|&nbsp; contactquickkaam@gmail.com  </p>
+      <p class="footer-tagline">Accelerate Your Business Growth</p>
+      <p>© 2026 QUICK काम. All rights reserved.</p>
+    </div>
+  </footer>
+
+    <script src="common.js?v=2" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+      // ============================================================
+      // CONTACT PAGE LOGIC (Using Centralized Email Sender with Turnstile)
+      // ============================================================
+
+      // EmailJS credentials (Service/Template IDs are non-sensitive)
+      const SERVICE_ID = 'service_4dc83hi';
+      const TEMPLATE_ID = 'template_z3fwja9';
+
+      const form = document.getElementById('contact-form-new');
+      const btn = document.getElementById('submit-btn');
+      const statusDiv = document.getElementById('form-status');
+      let turnstileWidgetId = null;
+
+      let submitAttempts = 0;
+      const MAX_ATTEMPTS = 3;
+
+      // Initialize Turnstile widget
+      try {
+        turnstileWidgetId = await renderTurnstileWidget('turnstile-widget-contact', 'auto', 'normal');
+        if (!turnstileWidgetId) {
+          console.warn('Turnstile widget failed to initialize');
+        }
+      } catch (error) {
+        console.error('Turnstile initialization error:', error);
+      }
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Honeypot
+        const honeypot = document.getElementById('honeypot-contact');
+        if (honeypot.value && honeypot.value.trim() !== '') {
+          window.location.href = '/404.html';
+          return;
+        }
+
+        // Rate limiting (UI only)
+        submitAttempts++;
+        if (submitAttempts > MAX_ATTEMPTS) {
+          statusDiv.className = 'error';
+          statusDiv.textContent = '⚠️ Too many attempts. Please try again later.';
+          statusDiv.style.display = 'block';
+          btn.disabled = true;
+          setTimeout(() => {
+            btn.disabled = false;
+            statusDiv.style.display = 'none';
+            submitAttempts = 0;
+          }, 60000);
+          return;
+        }
+
+        // Collect data
+        const firstName = document.getElementById('first-name-new').value.trim();
+        const lastName = document.getElementById('last-name-new').value.trim();
+        const email = document.getElementById('email-field-new').value.trim();
+        const phone = document.getElementById('phone-field-new').value.trim();
+        const message = document.getElementById('message-field-new').value.trim();
+
+        if (!firstName || !lastName || !email || !message) {
+          statusDiv.className = 'error';
+          statusDiv.textContent = '⚠️ Please fill in all required fields.';
+          statusDiv.style.display = 'block';
+          document.querySelectorAll('#contact-form-new [required]').forEach(field => {
+            if (!field.value.trim()) {
+              field.style.borderColor = '#ff6b6b';
+              setTimeout(() => { field.style.borderColor = ''; }, 3000);
+            }
+          });
+          return;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          statusDiv.className = 'error';
+          statusDiv.textContent = '⚠️ Please enter a valid email address.';
+          statusDiv.style.display = 'block';
+          document.getElementById('email-field-new').style.borderColor = '#ff6b6b';
+          setTimeout(() => { document.getElementById('email-field-new').style.borderColor = ''; }, 3000);
+          return;
+        }
+
+        // Sanitize
+        const cleanMessage = message
+          .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+          .replace(/javascript:/gi, '')
+          .replace(/on\w+\s*=/gi, '')
+          .replace(/[|;&$`()<>]/g, '');
+
+        const templateParams = {
+          from_name: firstName + ' ' + lastName,
+          from_email: email,
+          phone: phone,
+          message: cleanMessage,
+        };
+
+        // UI: sending
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+        statusDiv.style.display = 'none';
+
+        // 🔐 Send via centralized secure EmailJS handler with Turnstile
+        sendEmailJS(SERVICE_ID, TEMPLATE_ID, templateParams, turnstileWidgetId)
+          .then(function(response) {
+            statusDiv.className = 'success';
+            statusDiv.textContent = '✅ Message sent successfully! We\'ll get back to you within 24 hours.';
+            statusDiv.style.display = 'block';
+            btn.textContent = '✓ Sent!';
+            btn.style.background = '#333';
+            btn.style.color = '#fff';
+            form.reset();
+            
+            // Reset Turnstile widget
+            if (window.turnstile && turnstileWidgetId) {
+              window.turnstile.reset(turnstileWidgetId);
+            }
+            submitAttempts = 0;
+
+            // Optional: Log to backend (gracefully fails if backend is down)
+            if (typeof submitForm === 'function') {
+              submitForm('contact', {
+                name: firstName + ' ' + lastName,
+                email: email,
+                phone: phone || '',
+                message: cleanMessage,
+              });
+            }
+
+            setTimeout(() => {
+              btn.innerHTML = 'Send <i class="fas fa-arrow-right"></i>';
+              btn.disabled = false;
+              btn.style.background = '';
+              btn.style.color = '';
+              statusDiv.style.display = 'none';
+              statusDiv.className = '';
+            }, 8000);
+          })
+          .catch(function(error) {
+            statusDiv.className = 'error';
+            statusDiv.textContent = error.message.includes('Turnstile') ? 
+              '⚠️ Please complete the security verification.' : 
+              '❌ Failed to send. Please try again later.';
+            statusDiv.style.display = 'block';
+            btn.innerHTML = 'Send <i class="fas fa-arrow-right"></i>';
+            btn.disabled = false;
+            btn.style.background = '';
+            btn.style.color = '';
+            
+            // Reset Turnstile widget on error
+            if (window.turnstile && turnstileWidgetId) {
+              window.turnstile.reset(turnstileWidgetId);
+            }
+            
+            console.error('EmailJS error:', error);
+          });
+      });
+
+      // Real-time validation
+      document.querySelectorAll('#contact-form-new .input').forEach(field => {
+        field.addEventListener('blur', function() {
+          if (this.hasAttribute('required') && !this.value.trim()) {
+            this.style.borderColor = '#ff6b6b';
+          } else if (this.type === 'email' && this.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value.trim())) {
+            this.style.borderColor = '#ff6b6b';
+          } else {
+            this.style.borderColor = '';
+          }
+        });
+        field.addEventListener('input', function() {
+          if (this.style.borderColor === '#ff6b6b' && this.value.trim()) {
+            if (this.type === 'email' && this.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value.trim())) {
+              return;
+            }
+            this.style.borderColor = '';
+          }
+        });
+      });
+
+      // Track contact section view
+      const contactSection = document.getElementById('contact-section');
+      if (contactSection) {
+        const sectionObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              if (typeof track === 'function') {
+                track('section_view', { section: 'contact_page' });
+              }
+              sectionObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+        sectionObserver.observe(contactSection);
+      }
+    });
+  </script>
+</body>
+</html>

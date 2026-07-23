@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7KWH63TV0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q7KWH63TV0');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- ===== FAVICON (Browser Tab Logo) ===== -->
+  <link rel="icon" href="https://quickkaam.in/Images/QK%20WEB.png" type="image/png" sizes="64x64" />
+  <!-- ===== SEO ===== -->
+  <title>Book a Service | QUICK काम – Digital Marketing & Branding</title>
+  <meta name="description" content="We don't just build brands; we engineer growth through precision marketing and technical excellence." />
+  
+  <!-- ===== SECURITY HEADERS ===== -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  
+  <!-- ===== OPEN GRAPH / SOCIAL MEDIA PREVIEW ===== -->
+  <meta property="og:title" content="Book a Service | QUICK काम – Engineered Growth Through Precision Marketing" />
+  <meta property="og:description" content="We don't just build brands; we engineer growth through precision marketing and technical excellence." />
+  <meta property="og:image" content="https://quickkaam.in/Images/QK%20WEB.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://quickkaam.in/book-online" />
+  <meta property="og:type" content="website" />
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://quickkaam.in/Images/QK%20WEB.png" />
+
+  <!-- ===== UPDATED CSP WITH GOOGLE ALLOWED ===== -->
+  <meta name="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https://api.emailjs.com https://api.countapi.xyz https://www.google-analytics.com; frame-ancestors 'none'; upgrade-insecure-requests;" />
+  
+  <meta name="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), bluetooth=(), xr-spatial-tracking=()" />
+  <meta name="X-XSS-Protection" content="1; mode=block" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "Book a Service",
+      "description": "We don't just build brands; we engineer growth through precision marketing and technical excellence.",
+      "url": "https://quickkaam.in/book-online",
+      "publisher": {
+        "@id": "https://quickkaam.in/#organization"
+      },
+      "about": [
+        { "@type": "Service", "name": "Brand Building" },
+        { "@type": "Service", "name": "Political PR Services" },
+        { "@type": "Service", "name": "Growth Architecture" },
+        { "@type": "Service", "name": "Web Designing, Development & Cyber Security" },
+        { "@type": "Service", "name": "Legal Advisor" },
+        { "@type": "Service", "name": "360° Marketing" },
+        { "@type": "Service", "name": "SEO Services" },
+        { "@type": "Service", "name": "Graphic Designing" },
+        { "@type": "Service", "name": "Content Writing" },
+        { "@type": "Service", "name": "Event Planning" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://quickkaam.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Book Online",
+          "item": "https://quickkaam.in/book-online"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Main wrapper */
+    .book-grid-electric {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 100%;
+    }
+
+    /* Row Segment Container */
+    .grid-row-segment {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      width: 100%;
+      justify-content: center; /* Centers cards horizontally inside each row perfectly */
+    }
+
+    /* Base Sizing for Cards across all layout configurations */
+    .card-container {
+      display: flex !important;
+      flex-direction: column;
+      height: auto;
+      margin: 0;
+      width: 100%;
+    }
+
+ 
+/* Desktop starts at 1200px — 4 columns */
+@media (min-width: 1200px) {
+  .card-container {
+    width: calc(25% - 23px);
+    max-width: 340px;
+    flex-shrink: 0;
+  }
+}
+
+    /* Content height normalization */
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .content-bottom {
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <svg class="svg-container" style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
+    <defs>
+      <filter id="turbulent-displace" color-interpolation-filters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="1" />
+        <feOffset in="noise1" dx="0" dy="0" result="offsetNoise1">
+          <animate attributeName="dy" values="700; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+        </feOffset>
+        <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="1" />
+        <feOffset in="noise2" dx="0" dy="0" result="offsetNoise2">
+          <animate attributeName="dy" values="0; -700" dur="6s" repeatCount="indefinite" calcMode="linear" />
+        </feOffset>
+        <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="2" />
+        <feOffset in="noise1" dx="0" dy="0" result="offsetNoise3">
+          <animate attributeName="dx" values="490; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+        </feOffset>
+        <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="2" />
+        <feOffset in="noise2" dx="0" dy="0" result="offsetNoise4">
+          <animate attributeName="dx" values="0; -490" dur="6s" repeatCount="indefinite" calcMode="linear" />
+        </feOffset>
+        <feComposite in="offsetNoise1" in2="offsetNoise2" result="part1" />
+        <feComposite in="offsetNoise3" in2="offsetNoise4" result="part2" />
+        <feBlend in="part1" in2="part2" mode="color-dodge" result="combinedNoise" />
+        <feDisplacementMap in="SourceGraphic" in2="combinedNoise" scale="30" xChannelSelector="R" yChannelSelector="B" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Removed unused cursor-dot and cursor-ring -->
+  <div class="progress-bar"></div>
+  <a href="tel:+916202469886" class="float-call float-call-1" aria-label="Call Quick Kaam - 6202469886"><i class="fas fa-phone-alt"></i></a>
+  <a href="tel:+919229884148" class="float-call float-call-2" aria-label="Call Quick Kaam - 9229884148"><i class="fas fa-phone-alt"></i></a>
+
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="/" class="logo click-animate">
+        <img src="Images/qk%20logo.png" alt="Quick Kaam Logo" class="logo-img">
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-hamburger">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/brand-building">Brand Building</a>
+        <a href="/book-online" class="active" aria-current="page">Book a Service</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="book-hero">
+      <div class="container">
+        <div class="book-hero-inner slide-right">
+          <span class="section-label">Transparent Pricing</span>
+          <h1 class="click-animate">Book a Service</h1>
+          <p>Choose from our range of result-driven services. Every engagement is built around your goals, timeline, and budget.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="book-listing-electric">
+      <div class="container-fluid" style="max-width:1600px; margin:0 auto; padding:0 20px;">
+        
+        <div class="book-grid-electric" id="electricGrid">
+
+          <div class="grid-row-segment">
+            
+            <div class="card-container slide-right">
+              <div class="inner-container">
+                <div class="border-outer"><div class="main-card"></div></div>
+                <div class="glow-layer-1"></div>
+                <div class="glow-layer-2"></div>
+              </div>
+              <div class="overlay-1"></div>
+              <div class="overlay-2"></div>
+              <div class="background-glow"></div>
+              <div class="content-container electric-content">
+                <div class="content-top">
+                  <div class="electric-icon"><i class="fas fa-building"></i></div>
+                  <h3 class="title">Brand Building</h3>
+                </div>
+                <hr class="divider" />
+                <div class="content-bottom">
+                  <p class="description">Craft your unique brand identity. Elevate your business with strategies tailored to your needs.</p>
+                  <div class="electric-tags">
+                    <span>Identity</span><span>Positioning</span><span>Strategy</span>
+                  </div>
+                  <a href="/booking?service=Brand%20Building" class="diamond-btn" onclick="if (typeof track === 'function') track('book_now_click', { service: 'Brand Building' });">
+                    <span>Book Now</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-container slide-right" style="transition-delay:0.1s;">
+              <div class="inner-container">
+                <div class="border-outer"><div class="main-card"></div></div>
+                <div class="glow-layer-1"></div>
+                <div class="glow-layer-2"></div>
+              </div>
+              <div class="overlay-1"></div>
+              <div class="overlay-2"></div>
+              <div class="background-glow"></div>
+              <div class="content-container electric-content">
+                <div class="content-top">
+                  <div class="electric-icon"><i class="fas fa-flag"></i></div>
+                  <h3 class="title">Political PR Services</h3>
+                </div>
+                <hr class="divider" />
+                <div class="content-bottom">
+                  <p class="description">Strategic political communication and campaign management for leaders and parties.</p>
+                  <div class="electric-tags">
+                    <span>Campaign</span><span>Branding</span><span>Media</span>
+                  </div>
+                  <a href="/booking?service=Political%20PR" class="diamond-btn" onclick="if (typeof track === 'function') track('book_now_click', { service: 'Political PR Services' });">
+                    <span>Book Now</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-container slide-right" style="transition-delay:0.2s;">
+              <div class="inner-container">
+                <div class="border-outer"><div class="main-card"></div></div>
+                <div class="glow-layer-1"></div>
+                <div class="glow-layer-2"></div>
+              </div>
+              <div class="overlay-1"></div>
+              <div class="overlay-2"></div>
+              <div class="background-glow"></div>
+              <div class="content-container electric-content">
+                <div class="content-top">
+                  <div class="electric-icon"><i class="fas fa-chart-pie"></i></div>
+                  <h3 class="title">Growth Architecture</h3>
+                </div>
+                <hr class="divider" />
+                <div class="content-bottom">
+                  <p class="description">We design, build, and manage the complete digital ecosystem your business needs to scale – from ads that perform to analytics that inform strategy.</p>
+                  <div class="electric-tags">
+                    <span>Ads Management</span><span>Account Manager</span><span>Analytics</span><span>Strategy Reports</span>
+                  </div>
+                  <a href="/booking?service=Growth%20Architecture" class="diamond-btn" onclick="if (typeof track === 'function') track('book_now_click', { service: 'Growth Architecture' });">
+                    <span>Book Now</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-container slide-right" style="transition-delay:0.3s;">
+              <div class="inner-container">
+                <div class="border-outer"><div class="main-card"></div></div>
+                <div class="glow-layer-1"></div>
+                <div class="glow-layer-2"></div>
+              </div>
+              <div class="overlay-1"></div>
+              <div class="overlay-2"></div>
+              <div class="background-glow"></div>
+              <div class="content-container electric-content">
+                <div class="content-top">
+                  <div class="electric-icon"><i class="fas fa-shield-alt"></i></div>
+                  <h3 class="title">Web Design, Dev &amp; Cyber Security</h3>
+                </div>
+                <hr class="divider" />
+                <div class="content-bottom">
+                  <p class="description">Visually appealing, functional, and secure websites for your brand.</p>
+                  <div class="electric-tags">
+                    <span>Design</span><span>Development</span><span>Security</span>
+                  </div>
+                  <a href="/booking?service=Web%20Design" class="diamond-btn" onclick="if (typeof track === 'function') track('book_now_click', { service: 'Web Design & Cyber Security' });">
+                    <span>Book Now</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-row-segment">
+            
+            <div class="card-container slide-right" style="transition-delay:0.4s;">
+              <div class="inner-container">
+                <div class="border-outer"><div class="main-card"></div></div>
+                <div class="glow-layer-1"></div>
+                <div class="glow-layer-2"></div>
+              </div>
+              <div class="overlay-1"></div>
+              <div class="overlay-2"></div>
+              <div class="background-glow"></div>
+              <div class="content-container electric-content">
+                <div class="content-top">
+                  <div class="electric-icon"><i class="fas fa-gavel"></i></div>
+                  <h3 class="title">Legal Advisor</h3>
+                </div>
+                <hr class="divider" />
+                <div class="content-bottom">
+                  <p class="description">Expert legal consultation, contract drafting, IP guidance, and dispute resolution for brands, creators, and businesses.</p>
+                  <div class="electric-tags">
+                    <span>Consultation</span><span>Contracts</span><span>Legal Support</span><span>Agreements</span>
+                  </div>
+                  <a href="/booking?service=Legal%20Advisor" class="diamond-btn" onclick="if (typeof track === 'function') track('book_now_click', { service: 'Legal Advisor' });">
+                    <span>Book Now</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-container slide-right" style="transition-delay:0.5s;">
+              <div class="inner-container">
+                <div class="border-outer"><div class="main-card"></div></div>
+                <div class="glow-layer-1"></div>
+                <div class="glow-layer-2"></div>
+              </div>
+              <div class="overlay-1"></div>
+              <div class="overlay-2"></div>
+              <div class="background-glow"></div>
+              <div class="content-container electric-content">
+                <div class="content-top">
+                  <div class="electric-icon"><i class="fas fa-bullhorn"></i></div>
+                  <h3 class="title">360° Marketing</h3>
+                </div>
+                <hr class="divider" />
+                <div class="content-bottom">
+                  <p class="description">Full-spectrum campaigns across all channels, engineered for maximum reach and impact.</p>
+                  <div class="electric-tags">
+                    <span>Social</span><span>Paid Ads</span><span>Email</span>
+                  </div>
+                  <a href="/booking?service=Marketing" class="diamond-btn" onclick="if (typeof track === 'function') track('book_now_click', { service: '360° Marketing' });">
+                    <span>Book Now</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-container slide-right" style="transition-delay:0.6s;">
+              <div class="inner-container">
+                <div class="border-outer"><div class="main-card"></div></div>
+                <div class="glow-layer-1"></div>
+                <div class="glow-layer-2"></div>
+              </div>
+              <div class="overlay-1"></div>
+              <div class="overlay-2"></div>
+              <div class="background-glow"></div>
+              <div class="content-container electric-content">
+                <div class="content-top">
+                  <div class="electric-icon"><i class="fas fa-chart-simple"></i></div>
+                  <h3 class="title">SEO Services</h3>
+                </div>
+                <hr class="divider" />
+                <div class="content-bottom">
+                  <p class="description">Dominate search rankings with technical and creative SEO strategies built for long-term growth.</p>
+                  <div class="electric-tags">
+                    <span>Local SEO</span><span>Audit</span><span>Rankings</span>
+                  </div>
+                  <a href="/booking?service=SEO" class="diamond-btn" onclick="if (typeof track === 'function') track('book_now_click', { service: 'SEO Services' });">
+                    <span>Book Now</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-row-segment">
+            
+            <div class="card-container slide-right" style="transition-delay:0.7s;">
+              <div class="inner-container">
+                <div class="border-outer"><div class="main-card"></div></div>
+                <div class="glow-layer-1"></div>
+                <div class="glow-layer-2"></div>
+              </div>
+              <div class="overlay-1"></div>
+              <div class="overlay-2"></div>
+              <div class="background-glow"></div>
+              <div class="content-container electric-content">
+                <div class="content-top">
+                  <div class="electric-icon"><i class="fas fa-pen-fancy"></i></div>
+                  <h3 class="title">Graphic Designing</h3>
+                </div>
+                <hr class="divider" />
+                <div class="content-bottom">
+                  <p class="description">Logos, banners, reels, motion graphics, and animations that make your brand stand out.</p>
+                  <div class="electric-tags">
+                    <span>Logo</span><span>Video</span><span>Motion</span>
+                  </div>
+                  <a href="/booking?service=Graphic%20Designing" class="diamond-btn" onclick="if (typeof track === 'function') track('book_now_click', { service: 'Graphic Designing' });">
+                    <span>Book Now</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-container slide-right" style="transition-delay:0.8s;">
+              <div class="inner-container">
+                <div class="border-outer"><div class="main-card"></div></div>
+                <div class="glow-layer-1"></div>
+                <div class="glow-layer-2"></div>
+              </div>
+              <div class="overlay-1"></div>
+              <div class="overlay-2"></div>
+              <div class="background-glow"></div>
+              <div class="content-container electric-content">
+                <div class="content-top">
+                  <div class="electric-icon"><i class="fas fa-file-alt"></i></div>
+                  <h3 class="title">Content Writing</h3>
+                </div>
+                <hr class="divider" />
+                <div class="content-bottom">
+                  <p class="description">Engaging blogs, persuasive copy, and tailored content that connects with your audience and drives results.</p>
+                  <div class="electric-tags">
+                    <span>Blogs</span><span>Copywriting</span><span>Social Media</span>
+                  </div>
+                  <a href="/booking?service=Content%20Writing" class="diamond-btn" onclick="if (typeof track === 'function') track('book_now_click', { service: 'Content Writing' });">
+                    <span>Book Now</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-row-segment">
+            
+            <div class="card-container slide-right" style="transition-delay:0.9s;">
+              <div class="inner-container">
+                <div class="border-outer"><div class="main-card"></div></div>
+                <div class="glow-layer-1"></div>
+                <div class="glow-layer-2"></div>
+              </div>
+              <div class="overlay-1"></div>
+              <div class="overlay-2"></div>
+              <div class="background-glow"></div>
+              <div class="content-container electric-content">
+                <div class="content-top">
+                  <div class="electric-icon"><i class="fas fa-calendar-check"></i></div>
+                  <h3 class="title">Event Planning</h3>
+                </div>
+                <hr class="divider" />
+                <div class="content-bottom">
+                  <p class="description">End-to-end event management from corporate summits to celebrations — we handle it all.</p>
+                  <div class="electric-tags">
+                    <span>Corporate</span><span>Decor</span><span>Logistics</span>
+                  </div>
+                  <a href="/booking?service=Event%20Planning" class="diamond-btn" onclick="if (typeof track === 'function') track('book_now_click', { service: 'Event Planning' });">
+                    <span>Book Now</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="book-disclaimer slide-right">* Prices are indicative. Final quotes based on project scope. <a href="/contact" onclick="if (typeof track === 'function') track('cta_click', { button: 'Contact us - Disclaimer' });">Contact us</a> for a custom package.</p>
+      </div>
+    </section>
+
+    <section class="contact-cta" id="cta-section">
+      <div class="container">
+        <div class="cta-box slide-right">
+          <div class="cta-content">
+            <h2>Not sure which service fits?</h2>
+            <p>Let's have a quick call and sketch the right strategy for you.</p>
+            <a href="/contact" class="diamond-btn" onclick="if (typeof track === 'function') track('cta_click', { button: 'Talk to Us - Book Online' });">
+              <span>Talk to Us</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+          <div class="cta-sketch"><i class="fas fa-pencil-ruler"></i></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="/" class="logo">
+        <img src="Images/white%20qk.png" alt="Quick Kaam Logo" class="logo-img">
+      </a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/brand-building">Brand Building</a>
+        <a href="/book-online">Book a Service</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/share/185EmjX7TJ/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/quickkaam" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/QUICKKAAM" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/quick-%E0%A4%95%E0%A4%BE%E0%A4%AE" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>+91 62024 69886 &nbsp;|&nbsp; contactquickkaam@gmail.com</p>
+      <p class="footer-tagline">Accelerate Your Business Growth</p>
+      <p>© 2026 QUICK काम. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="common.js?v=2" defer></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // SLIDE RIGHT OBSERVER
+      const slideElements = document.querySelectorAll('.slide-right');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+      slideElements.forEach(el => observer.observe(el));
+
+      // Track CTA section view (safe check)
+      const ctaSection = document.getElementById('cta-section');
+      if (ctaSection) {
+        const sectionObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              if (typeof track === 'function') {
+                track('section_view', { section: 'book_online_cta' });
+              }
+              sectionObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+        sectionObserver.observe(ctaSection);
+      }
+    });
+  </script>
+</body>
+</html>
