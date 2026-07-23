@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7KWH63TV0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q7KWH63TV0');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- ===== FAVICON (Browser Tab Logo) ===== -->
+  <link rel="icon" href="https://quickkaam.in/Images/QK%20WEB.png" type="image/png" sizes="64x64" />
+  <!-- ===== SEO ===== -->
+  <title>Loading | QUICK काम</title>
+  <meta name="description" content="We don't just build brands; we engineer growth through precision marketing and technical excellence." />
+  
+  <!-- ===== SECURITY HEADERS ===== -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  
+  <!-- ===== OPEN GRAPH / SOCIAL MEDIA PREVIEW ===== -->
+  <meta property="og:title" content="Loading | QUICK काम – Engineered Growth Through Precision Marketing" />
+  <meta property="og:description" content="We don't just build brands; we engineer growth through precision marketing and technical excellence." />
+  <meta property="og:image" content="https://quickkaam.in/Images/QK%20WEB.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://quickkaam.in/loading" />
+  <meta property="og:type" content="website" />
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://quickkaam.in/Images/QK%20WEB.png" />
+
+  <!-- ===== UPDATED CSP WITH GOOGLE ALLOWED ===== -->
+  <meta name="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.transparenttextures.com; connect-src 'self' https://api.emailjs.com https://api.countapi.xyz https://www.google-analytics.com; frame-ancestors 'none'; upgrade-insecure-requests;" />
+  
+  <meta name="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), bluetooth=(), xr-spatial-tracking=()" />
+  <meta name="X-XSS-Protection" content="1; mode=block" />
+  
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%);
+      overflow: hidden;
+    }
+
+    /* Animated Stars Background */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png');
+      animation: twinkle 5s linear infinite;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    @keyframes twinkle {
+      0% { background-position: 0 0; }
+      100% { background-position: 100% 100%; }
+    }
+
+    /* ===== LOGO WITH DIAGONAL SHINE (NO GLOW) ===== */
+    .logo-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      display: block;
+      width: 220px;
+      height: auto;
+      position: relative;
+      z-index: 1;
+      filter: none;
+    }
+
+    /* Diagonal shine overlay – masked to the logo shape */
+    .logo-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0) 35%,
+        rgba(255,255,255,0.7) 50%,
+        rgba(255,255,255,0) 65%,
+        rgba(255,255,255,0) 100%
+      );
+      background-size: 200% 200%;
+      background-position: -100% -100%;
+      z-index: 2;
+      pointer-events: none;
+      animation: shineDiagonal 2.5s ease-in-out infinite;
+      mix-blend-mode: overlay;
+
+      /* Mask the shine to the logo itself */
+      mask-image: url('Images/white%20qk.png');
+      mask-size: 100% 100%;
+      mask-repeat: no-repeat;
+      -webkit-mask-image: url('Images/white%20qk.png');
+      -webkit-mask-size: 100% 100%;
+      -webkit-mask-repeat: no-repeat;
+    }
+
+    @keyframes shineDiagonal {
+      0% {
+        background-position: -100% -100%;
+        opacity: 0;
+      }
+      20% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        background-position: 100% 100%;
+        opacity: 0;
+      }
+    }
+
+    /* Loading Balls */
+    .wrapper {
+      width: 200px;
+      height: 60px;
+      position: relative;
+    }
+
+    .circle {
+      width: 20px; height: 20px;
+      position: absolute;
+      border-radius: 50%;
+      background-color: #c7c7c7;
+      left: 15%;
+      animation: circle7124 .5s alternate infinite ease;
+    }
+
+    @keyframes circle7124 {
+      0% { top: 60px; height: 5px; transform: scaleX(1.7); }
+      40% { height: 20px; transform: scaleX(1); }
+      100% { top: 0%; }
+    }
+
+    .circle:nth-child(2) { left: 45%; animation-delay: .2s; }
+    .circle:nth-child(3) { left: auto; right: 15%; animation-delay: .3s; }
+
+    .shadow {
+      width: 20px; height: 4px;
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      top: 62px;
+      filter: blur(2px);
+      animation: shadow046 .5s alternate infinite ease;
+    }
+
+    @keyframes shadow046 {
+      0% { transform: scaleX(1.5); }
+      40% { transform: scaleX(1); opacity: .7; }
+      100% { transform: scaleX(.2); opacity: .4; }
+    }
+
+    .shadow:nth-child(5) { left: 45%; animation-delay: .2s; }
+    .shadow:nth-child(6) { left: auto; right: 15%; animation-delay: .3s; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== LOGO with shine (no glow) ===== -->
+  <div class="logo-wrapper" aria-hidden="true">
+    <img src="Images/white%20qk.png" alt="Quick Kaam Logo" class="logo">
+  </div>
+
+  <div class="wrapper" aria-hidden="true">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="shadow"></div>
+    <div class="shadow"></div>
+    <div class="shadow"></div>
+  </div>
+
+  <!-- Track loading page view (safe) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        if (typeof track === 'function') {
+          track('page_view', { page: 'loading' });
+        }
+      }, 500);
+    });
+  </script>
+</body>
+</html>
