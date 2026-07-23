@@ -162,6 +162,7 @@ input#toggle-wave:checked ~ .container .water-button {
 /* ----- FLOATING CALL BUTTON ----- */
 .float-call {
   position: fixed;
+  bottom: 30px;
   right: 30px;
   background: rgba(200,200,200,0.3);
   color: #000;
@@ -177,18 +178,9 @@ input#toggle-wave:checked ~ .container .water-button {
   transition: 0.25s;
   border: 1px solid #ddd;
 }
-.float-call-1 {
-  bottom: 30px;
-}
-.float-call-2 {
-  bottom: 95px;
-  background: rgba(180,220,180,0.35);
-  border-color: #aaddaa;
-}
 .float-call:hover {
   transform: scale(1.08);
   background: #222;
-  color: #fff;
 }
 .float-call::before {
   content: "";
@@ -203,7 +195,6 @@ input#toggle-wave:checked ~ .container .water-button {
 .float-call:hover::before {
   opacity: 0.5;
 }
-
 
 /* ----- CONTAINER ----- */
 .container {

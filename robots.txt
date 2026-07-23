@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /Images/
+
+Sitemap: https://quickkaam.in/sitemap.xml

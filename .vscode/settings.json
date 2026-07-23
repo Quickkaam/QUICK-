@@ -1,0 +1,4 @@
+{
+  "liveServer.settings.middleware": ["./middleware.js"],
+  "liveServer.settings.port": 5501
+}

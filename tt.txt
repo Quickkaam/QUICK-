@@ -1,0 +1,1259 @@
+# 🔐 Drishti Kavach – The Vision Shield
+# दृष्टि कवच – Complete SOC Dashboard Plan (v4.0)
+
+## 🕉️ Brand Identity
+
+### Name
+**Drishti Kavach** (दृष्टि कवच)
+- **Drishti** (दृष्टि) = Vision, Sight, Insight
+- **Kavach** (कवच) = Armor, Shield
+- **Together** = "The Vision Shield" – The all‑seeing armor of the digital world
+
+### Tagline
+> "See everything. Protect everything."
+
+### Sub‑Tagline
+> "The all‑seeing armor of the digital world."
+
+### Sanskrit Shlokas for Brand Identity
+
+#### 1. On Vision (Drishti)
+> **"दृष्टिः ज्ञानस्य प्रथमं द्वारम्"**
+> *"Vision is the first gateway to knowledge."*
+
+#### 2. On Protection (Kavach)
+> **"रक्षति रक्षितः"**
+> *"The protector is protected by protecting."*
+
+#### 3. Combined (Vision + Protection)
+> **"दृष्टिः रक्षति, रक्षा दृश्यते"**
+> *"Vision protects, and protection is seen."*
+
+#### 4. Universal (Motto)
+> **"आत्मनो मोक्षार्थं जगद्धिताय च"**
+> *"For the liberation of self and the good of the world."*
+
+#### 5. Daily Reminder (Guardian's Pledge)
+> **"अहं रक्षामि, अहं दृश्यामि"**
+> *"I protect, I see all."*
+
+### Brand Motto
+**"दृष्टिः रक्षति, रक्षा दृश्यते"**
+— *Vision protects, and protection is seen.*
+
+### Logo Concept
+An open eye (symbol of Drishti) integrated into a shield (symbol of Kavach). The "QK" monogram can be placed inside the pupil or at the center of the shield.
+
+### Color Palette
+
+| Color | Hex Code | Usage |
+|-------|----------|-------|
+| Deep Navy | `#0a0a2e` | Primary background – vigilance, depth |
+| Royal Blue | `#1a237e` | Secondary – authority, trust |
+| Gold | `#f5b041` | Accent – wisdom, value, premium |
+| Silver | `#cccccc` | Subtle elements – clarity, purity |
+| White | `#ffffff` | Main text – clarity, truth |
+| Saffron | `#ff9933` | Optional accent – Indian identity, courage |
+
+---
+
+## 🎯 Executive Summary
+
+**Drishti Kavach** is a fully professional Security Operations Center (SOC) Dashboard that:
+
+- Monitors website activity, detects threats, manages IP addresses, reviews form submissions
+- **Detects and mitigates DDoS attacks** automatically (traffic spikes, IP floods, botnets, geo‑spikes)
+- **Supports multiple websites** – monitor your own sites AND client sites from a single dashboard
+- **AI‑powered auto‑setup** – add a new website by uploading its files; AI injects tracking code automatically
+- **AI Virtual Assistant (Drishti AI)** works autonomously in your absence (auto‑investigate, auto‑block, chat)
+
+**Goal:** Run indefinitely with **zero recurring cost** by leveraging generous free tiers, open‑source technologies, and smart resource management.
+
+---
+
+## 🧠 Core Principles for Long‑Term Success
+
+| Principle | Implementation |
+|-----------|----------------|
+| **Vendor Independence** | Use standard SQL, REST APIs, and static frontends – easy to migrate |
+| **Data Ownership** | All data in your own PostgreSQL instance (Supabase) |
+| **Resource Efficiency** | Cache IP intelligence, batch writes, avoid unnecessary API calls |
+| **Data Retention** | Auto‑archive/delete old logs to stay within free DB limits |
+| **Scalability** | Free tiers sufficient for small‑to‑medium traffic; upgrade path clear |
+| **Open Source** | Use MIT/Apache licensed libraries – no licensing costs |
+| **AI Integration** | DeepSeek API (free) for autonomous threat handling |
+| **Multi‑Tenant Design** | One dashboard, many websites – isolated client data |
+| **Zero‑Touch Onboarding** | AI‑powered file injection – no manual code changes needed |
+
+---
+
+## 🏗️ System Architecture
+┌────────────────────────────────────────────────────────────────────────────┐
+│ WEBSITES (Multiple) │
+│ Hosted anywhere (GitHub Pages, VPS, etc.) │
+│ ┌────────────────────────────────────────────────────────────────────┐ │
+│ │ Client Website A – SDK Snippet (one‑line) │ │
+│ │ – Sends events to Drishti Kavach API with unique API key │ │
+│ └────────────────────────────────────────────────────────────────────┘ │
+│ ┌────────────────────────────────────────────────────────────────────┐ │
+│ │ Client Website B – SDK Snippet (auto‑injected by AI) │ │
+│ └────────────────────────────────────────────────────────────────────┘ │
+│ ┌────────────────────────────────────────────────────────────────────┐ │
+│ │ Client Website C, D, E ... (unlimited) │ │
+│ └────────────────────────────────────────────────────────────────────┘ │
+└───────────────────────────────────────┬────────────────────────────────────┘
+│ HTTPS (public) with unique API key
+▼
+┌────────────────────────────────────────────────────────────────────────────┐
+│ BACKEND API (Node.js) │
+│ Hosted on Render (free tier) │
+│ ┌────────────────────────────────────────────────────────────────────┐ │
+│ │ Core Endpoints: │ │
+│ │ /api/log – receive events (requires API key) │ │
+│ │ /api/sdk/config – get client‑specific settings │ │
+│ │ /api/ip/* – IP intelligence, block/unblock (tenant‑aware) │ │
+│ │ /api/security – security events (tenant‑aware) │ │
+│ │ /api/forms – form submissions (tenant‑aware) │ │
+│ │ /api/auth – JWT authentication │ │
+│ │ /api/dashboard – aggregated stats (tenant‑aware) │ │
+│ │ /api/audit – admin audit logs │ │
+│ │ /api/ai – Drishti AI Assistant endpoints │ │
+│ │ /api/reports – generate PDF reports (tenant‑aware) │ │
+│ │ /api/settings – alert rules, notification channels │ │
+│ │ /api/tokens – API token management │ │
+│ │ /api/websites – multi‑tenant management (admin only) │ │
+│ │ /api/client – client‑facing dashboard endpoints │ │
+│ │ /api/ddos – DDoS detection & mitigation │ │
+│ └────────────────────────────────────────────────────────────────────┘ │
+│ ┌────────────────────────────────────────────────────────────────────┐ │
+│ │ 🤖 Drishti AI Assistant Module │ │
+│ │ – Auto‑investigates new security events │ │
+│ │ – Auto‑blocks malicious IPs (threat score > 80) │ │
+│ │ – Auto‑triage & prioritize incidents │ │
+│ │ – Chat interface: "Show me today's threats" │ │
+│ │ – Daily summary reports via Slack/Email │ │
+│ │ – Anomaly detection (UEBA) │ │
+│ │ – AI‑powered website onboarding (file injection) │ │
+│ │ – Tenant‑aware: knows which website it's analyzing │ │
+│ └────────────────────────────────────────────────────────────────────┘ │
+│ ┌────────────────────────────────────────────────────────────────────┐ │
+│ │ 🛡️ DDoS Detection Engine │ │
+│ │ – Traffic spike detection (3x/10x thresholds) │ │
+│ │ – IP flood detection (100+ requests/min from same IP) │ │
+│ │ – Botnet detection (identical User‑Agent floods) │ │
+│ │ – Geographic spike detection (country > 70% of traffic) │ │
+│ │ – Cloudflare Under Attack mode auto‑enable │ │
+│ └────────────────────────────────────────────────────────────────────┘ │
+│ Middleware: │
+│ - Helmet (security headers) │
+│ - CORS (restricted to your domains) │
+│ - API Key validation (for SDK endpoints) │
+│ - express-rate-limit (per IP + per API key) │
+│ - JWT authentication for protected endpoints │
+│ - RBAC middleware (check user roles) │
+│ - Tenant isolation (ensure data is only accessible by owner) │
+│ - Input sanitisation & validation │
+│ - WebSocket server (Socket.io) for real-time updates │
+└───────────────────────────────────────┬────────────────────────────────────┘
+│
+▼
+┌────────────────────────────────────────────────────────────────────────────┐
+│ DATABASE (PostgreSQL on Supabase) │
+│ Free tier (500 MB, 2 GB bandwidth) │
+│ ┌────────────────────────────────────────────────────────────────────┐ │
+│ │ Tables: │ │
+│ │ – websites (tenants) – each with unique API key │ │
+│ │ – clients (companies using your SOC) │ │
+│ │ – integration_logs (onboarding history) │ │
+│ │ – events (page views, clicks, scrolls – with website_id) │ │
+│ │ – form_submissions (contact & booking – with website_id) │ │
+│ │ – security_events (honeypot, SQLi, XSS – with website_id) │ │
+│ │ – ddos_events (DDoS detections) │ │
+│ │ – ddos_mitigations (actions taken) │ │
+│ │ – ip_block_list (blocked IPs – with website_id) │ │
+│ │ – ip_whitelist (whitelisted IPs – with website_id) │ │
+│ │ – ip_intel_cache (cached IP geo + threat data) │ │
+│ │ – users (dashboard admin accounts, roles) │ │
+│ │ – audit_logs (admin actions – with website_id) │ │
+│ │ – ai_decisions (AI reasoning & actions) │ │
+│ │ – ai_sessions (chat history) │ │
+│ │ – assistant_settings (AI configuration) │ │
+│ │ – api_tokens (for external integrations) │ │
+│ │ – saved_searches (user‑saved queries) │ │
+│ │ – incidents (incident lifecycle – with website_id) │ │
+│ │ – compliance_logs (GDPR/DPDP logs – with website_id) │ │
+│ └────────────────────────────────────────────────────────────────────┘ │
+│ Retention Policy: │
+│ – Events older than 90 days are auto‑deleted │
+│ – Security events older than 180 days are archived │
+│ – DDoS events older than 90 days are archived │
+│ – IP intel cache refreshed every 7 days │
+│ – AI sessions older than 30 days are archived │
+└────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌────────────────────────────────────────────────────────────────────────────┐
+│ DASHBOARD FRONTEND (React) │
+│ Hosted on Vercel (free tier) │
+│ ┌────────────────────────────────────────────────────────────────────┐ │
+│ │ Admin View (all websites): │ │
+│ │ – List of all monitored websites │ │
+│ │ – Add new website wizard (AI‑powered setup) │ │
+│ │ – Website settings (API key, status, plan) │ │
+│ │ – Switch between websites │ │
+│ │ – Full SOC features for each website │ │
+│ └────────────────────────────────────────────────────────────────────┘ │
+│ ┌────────────────────────────────────────────────────────────────────┐ │
+│ │ Client View (one website only): │ │
+│ │ – Stats cards │ │
+│ │ – Security events (their website only) │ │
+│ │ – Form submissions (their website only) │ │
+│ │ – Reports (their website only) │ │
+│ │ – IP block management (their website only) │ │
+│ │ – Settings (their website only) │ │
+│ └────────────────────────────────────────────────────────────────────┘ │
+│ Tech: React + Vite + Tailwind CSS + Recharts + Leaflet + Socket.io │
+└────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌────────────────────────────────────────────────────────────────────────────┐
+│ EXTERNAL SERVICES (Free) │
+│ ┌────────────────────────────────────────────────────────────────────┐ │
+│ │ ip‑api.com → IP geolocation (no key, 45 req/min) │ │
+│ │ AbuseIPDB → Threat intelligence (1000 req/day) │ │
+│ │ GreyNoise → Active scanner detection (20k req/day) │ │
+│ │ AlienVault OTX → Open threat intel pulses (unlimited) │ │
+│ │ VirusTotal → IP/domain reputation (500 req/day) │ │
+│ │ URLScan.io → URL/IP malicious content (10k req/day) │ │
+│ │ DeepSeek API → AI model for Drishti AI (free tier) │ │
+│ │ Cloudflare API → DDoS mitigation + IP blocking (free) │ │
+│ │ Sentry → Error monitoring (5000 errors/month) │ │
+│ │ Slack / Telegram → Alerts (free) │ │
+│ │ cron-job.org → Scheduled tasks (free) │ │
+│ │ Better Stack → Uptime monitoring (free) │ │
+│ └────────────────────────────────────────────────────────────────────┘ │
+└────────────────────────────────────────────────────────────────────────────┘
+
+text
+
+---
+
+## 🛡️ DDoS Attack Detection & Protection
+
+### Detection Methods (All Automated)
+
+| Detection Type | Threshold | How It Detects | Severity |
+|----------------|-----------|----------------|----------|
+| **Traffic Spike** | > 3x average (60‑min) | Compares last 5 min vs last 60 min average | Warning |
+| **Critical Traffic Spike** | > 10x average (60‑min) | Compares last 5 min vs last 60 min average | Critical |
+| **IP Flood** | > 100 requests/min from single IP | Counts requests per IP in 1‑minute window | Warning |
+| **Severe IP Flood** | > 500 requests/min from single IP | Counts requests per IP in 1‑minute window | Critical |
+| **Botnet (UA Flood)** | Single UA > 50% of total traffic | Counts User‑Agent distribution | Warning |
+| **Geographic Spike** | Single country > 70% of total traffic | Uses IP geolocation to track country distribution | Warning |
+| **Slowloris Detection** | Response time > 5s for > 10 requests | Measures API response time | Warning |
+
+### Mitigation Actions (Auto‑Executed)
+
+| Detection | Action 1 | Action 2 | Action 3 |
+|-----------|----------|----------|----------|
+| **Traffic Spike (Warning)** | 🔔 Alert (Slack + Telegram) | Create DDoS incident | Monitor for escalation |
+| **Traffic Spike (Critical)** | 🔔 Critical Alert | **Enable Cloudflare Under Attack Mode** | Block top 10 offending IPs |
+| **IP Flood** | Auto‑block the IP for 24h | Alert | Add to incident |
+| **Botnet (UA Flood)** | Rate‑limit the UA at API level | Alert | Add to incident |
+| **Geographic Spike** | Block the entire country temporarily | Alert | Add to incident |
+| **Slowloris** | Increase rate‑limiting timeout | Alert | Add to incident |
+
+### DDoS Tables
+
+```sql
+-- DDoS Events
+CREATE TABLE ddos_events (
+  id BIGSERIAL PRIMARY KEY,
+  website_id BIGINT REFERENCES websites(id),
+  severity VARCHAR(20), -- warning, critical
+  attack_type VARCHAR(50), -- traffic_spike, ip_flood, botnet, geo_spike, slowloris
+  details JSONB,
+  affected_ip INET,
+  total_requests INTEGER,
+  avg_requests INTEGER,
+  mitigation_taken BOOLEAN DEFAULT FALSE,
+  mitigation_details JSONB,
+  status VARCHAR(20) DEFAULT 'active',
+  created_at TIMESTAMP DEFAULT NOW(),
+  resolved_at TIMESTAMP
+);
+CREATE INDEX idx_ddos_website_id ON ddos_events(website_id);
+CREATE INDEX idx_ddos_created ON ddos_events(created_at);
+
+-- DDoS Mitigation Log
+CREATE TABLE ddos_mitigations (
+  id BIGSERIAL PRIMARY KEY,
+  ddos_event_id BIGINT REFERENCES ddos_events(id),
+  action VARCHAR(50), -- cloudflare_under_attack, ip_block, geo_block, rate_limit
+  target VARCHAR(255),
+  status VARCHAR(20), -- success, failed
+  details JSONB,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- DDoS Detection Rules (configurable)
+CREATE TABLE ddos_rules (
+  id BIGSERIAL PRIMARY KEY,
+  website_id BIGINT REFERENCES websites(id),
+  rule_type VARCHAR(50),
+  threshold_value INTEGER,
+  threshold_unit VARCHAR(20),
+  action VARCHAR(50),
+  severity VARCHAR(20),
+  is_active BOOLEAN DEFAULT TRUE,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+🏢 Multi‑Tenant (SOC as a Service)
+How to Onboard a New Website (4 Methods)
+Method	Description	Effort	Best For
+Method 1: One‑Line SDK Snippet	Client adds one line of code to their site	2 minutes	All websites
+Method 2: GitHub Integration	SOC connects to client's GitHub repo; auto‑adds tracking	5 minutes	Dev teams
+Method 3: Upload Files (AI‑Powered)	Client uploads website ZIP; AI injects tracking code	5 minutes	Non‑dev clients
+Method 4: Manual API Key	Client gets API key and implements custom integration	30 minutes	Custom apps
+Multi‑Tenant Tables
+sql
+-- Websites / Tenants
+CREATE TABLE websites (
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR(255),
+  domain VARCHAR(255) UNIQUE,
+  client_id BIGINT REFERENCES clients(id),
+  status VARCHAR(20) DEFAULT 'active',
+  tracking_script_url VARCHAR(255),
+  api_key VARCHAR(100) UNIQUE,
+  settings JSONB DEFAULT '{
+    "cloudflare_zone_id": null,
+    "monitoring_enabled": true,
+    "ddos_protection_enabled": true,
+    "auto_block_enabled": true,
+    "report_recipients": [],
+    "alert_channels": ["slack", "email"]
+  }',
+  framework_detected VARCHAR(50),
+  pages_detected INTEGER DEFAULT 0,
+  ai_analysis_result JSONB,
+  created_at TIMESTAMP DEFAULT NOW(),
+  last_seen_at TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT NOW()
+);
+CREATE INDEX idx_websites_domain ON websites(domain);
+CREATE INDEX idx_websites_client_id ON websites(client_id);
+CREATE INDEX idx_websites_api_key ON websites(api_key);
+CREATE INDEX idx_websites_status ON websites(status);
+
+-- Clients (companies using your SOC)
+CREATE TABLE clients (
+  id BIGSERIAL PRIMARY KEY,
+  company_name VARCHAR(255),
+  contact_name VARCHAR(255),
+  contact_email VARCHAR(255),
+  contact_phone VARCHAR(50),
+  plan VARCHAR(50) DEFAULT 'free',
+  dashboard_url VARCHAR(255),
+  settings JSONB DEFAULT '{}',
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
+CREATE INDEX idx_clients_email ON clients(contact_email);
+
+-- Integration Logs (for onboarding)
+CREATE TABLE integration_logs (
+  id BIGSERIAL PRIMARY KEY,
+  website_id BIGINT REFERENCES websites(id),
+  method VARCHAR(50),
+  files_processed INTEGER,
+  tracking_injected BOOLEAN DEFAULT FALSE,
+  status VARCHAR(20),
+  error_message TEXT,
+  details JSONB,
+  created_at TIMESTAMP DEFAULT NOW(),
+  completed_at TIMESTAMP
+);
+CREATE INDEX idx_integration_website_id ON integration_logs(website_id);
+CREATE INDEX idx_integration_status ON integration_logs(status);
+
+-- Add website_id to existing tables
+ALTER TABLE events ADD COLUMN website_id BIGINT REFERENCES websites(id);
+ALTER TABLE security_events ADD COLUMN website_id BIGINT REFERENCES websites(id);
+ALTER TABLE form_submissions ADD COLUMN website_id BIGINT REFERENCES websites(id);
+ALTER TABLE ip_block_list ADD COLUMN website_id BIGINT REFERENCES websites(id);
+ALTER TABLE ip_whitelist ADD COLUMN website_id BIGINT REFERENCES websites(id);
+ALTER TABLE audit_logs ADD COLUMN website_id BIGINT REFERENCES websites(id);
+ALTER TABLE incidents ADD COLUMN website_id BIGINT REFERENCES websites(id);
+ALTER TABLE compliance_logs ADD COLUMN website_id BIGINT REFERENCES websites(id);
+ALTER TABLE ai_decisions ADD COLUMN website_id BIGINT REFERENCES websites(id);
+
+-- Create indexes for multi-tenant queries
+CREATE INDEX idx_events_website_id ON events(website_id);
+CREATE INDEX idx_security_website_id ON security_events(website_id);
+CREATE INDEX idx_forms_website_id ON form_submissions(website_id);
+CREATE INDEX idx_block_website_id ON ip_block_list(website_id);
+CREATE INDEX idx_incidents_website_id ON incidents(website_id);
+Multi‑Tenant API Endpoints
+javascript
+// Public (Client‑Side SDK) – Requires API Key
+POST /api/sdk/log
+Headers: X-API-Key: {website_api_key}
+Body: { event_type, page_url, event_data, user_agent, referrer }
+
+GET /api/sdk/config
+Headers: X-API-Key: {website_api_key}
+Response: { settings: { monitoring_enabled, ddos_protection_enabled, ... } }
+
+// Protected (Admin Dashboard) – JWT Required
+
+// Websites Management
+GET    /api/websites              // List all websites
+POST   /api/websites              // Add new website (with AI setup)
+GET    /api/websites/:id          // Get website details
+PATCH  /api/websites/:id          // Update website settings
+DELETE /api/websites/:id          // Remove website
+
+// Client Management
+GET    /api/clients               // List all clients
+POST   /api/clients               // Add new client
+GET    /api/clients/:id           // Get client details
+PATCH  /api/clients/:id           // Update client
+DELETE /api/clients/:id           // Delete client
+
+// Website Onboarding
+POST   /api/websites/:id/upload   // Upload website ZIP (AI processes)
+POST   /api/websites/:id/sync-github // Connect GitHub repo
+GET    /api/websites/:id/snippet  // Get tracking snippet
+POST   /api/websites/:id/regenerate-key // Regenerate API key
+
+// Tenant‑Aware Security
+GET    /api/websites/:id/security // Security events for this website
+GET    /api/websites/:id/forms    // Form submissions for this website
+GET    /api/websites/:id/stats    // Stats for this website
+POST   /api/websites/:id/block    // Block IP for this website
+POST   /api/websites/:id/unblock  // Unblock IP for this website
+
+// Client Dashboard (Tenant‑Specific)
+GET    /api/client/stats          // Stats for their website
+GET    /api/client/events         // Events for their website
+GET    /api/client/security       // Security events for their website
+GET    /api/client/forms          // Form submissions for their website
+GET    /api/client/reports        // Reports for their website
+POST   /api/client/settings       // Update their website settings
+🤖 Drishti AI – Virtual Assistant
+Core Capabilities
+Feature	What It Does
+Auto-Investigate Threats	When a security event hits, AI checks IP reputation, decides severity, and suggests action
+Auto-Block Malicious IPs	If threat score > 80, AI blocks the IP automatically and logs the reason
+Auto-Triage Incidents	Categorizes incidents and assigns priority (P1–P4)
+Summarize Daily Activity	Sends daily summary via Slack/Telegram/Email
+Answer Questions (Chat)	"Show me all SQLi attempts in the last 24 hours"
+Recommend Actions	If incident unresolved for 2 hours, suggests escalation
+Alert Correlation	Groups multiple events from same IP into a single incident
+Trend Analysis	"There's been a 300% increase in XSS attempts this week"
+MITRE ATT&CK Advisor	Suggests mitigations based on MITRE techniques detected
+Compliance Assistant	Checks if security posture meets GDPR/DPDP requirements
+Root Cause Analysis	After resolution, AI suggests root cause and prevention measures
+Chat Interface Capabilities
+User Asks	Drishti AI Responds
+"Show me today's threats"	Lists all security events from today with severity
+"Should I block IP 103.xx.xx.xx?"	Provides intelligence: location, threat score, recommendation
+"What's the current threat level?"	Shows current threat status (🟢 LOW / 🟡 MEDIUM / 🔴 HIGH)
+"Summarize the last 7 days"	Weekly summary with trends and recommendations
+"Who accessed the admin panel today?"	Lists admin logins with timestamps
+"Are we GDPR compliant?"	GDPR readiness report
+"Block all IPs from Russia"	Bulk IP blocking
+Autonomous Modes
+Mode	What It Does	When to Use
+Guardian Mode	Monitors 24/7, auto-blocks critical threats, sends alerts	Always on
+Analyst Mode	Investigates alerts, writes incident summaries, recommends actions	When you're away
+Reporter Mode	Generates daily/weekly reports and sends to email/Slack	Scheduled
+Teacher Mode	Explains threats in simple language, suggests improvements	Learning/Onboarding
+AI Tables
+sql
+-- AI Decisions
+CREATE TABLE ai_decisions (
+  id BIGSERIAL PRIMARY KEY,
+  website_id BIGINT REFERENCES websites(id),
+  event_id BIGINT,
+  ip INET,
+  decision_type VARCHAR(50),
+  reasoning TEXT,
+  confidence_score INTEGER,
+  action_taken BOOLEAN,
+  action_result TEXT,
+  model_used VARCHAR(50),
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- AI Sessions (Chat)
+CREATE TABLE ai_sessions (
+  id BIGSERIAL PRIMARY KEY,
+  session_id UUID,
+  user_id BIGINT,
+  question TEXT,
+  response TEXT,
+  context JSONB,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Assistant Settings
+CREATE TABLE assistant_settings (
+  id BIGSERIAL PRIMARY KEY,
+  setting_key VARCHAR(50) UNIQUE,
+  setting_value JSONB,
+  updated_at TIMESTAMP DEFAULT NOW(),
+  updated_by VARCHAR(100)
+);
+🔌 Complete API Endpoints
+Public (No Auth)
+POST /api/log – receive events (rate-limited: 10/min per IP)
+
+GET /api/health – health check
+
+Protected (JWT Required)
+Dashboard & Stats
+
+GET /api/dashboard/stats – overview stats
+
+GET /api/dashboard/events – recent events feed
+
+GET /api/dashboard/trends – threat trend chart data
+
+IP Management
+
+GET /api/ip/:ip – IP intelligence
+
+POST /api/ip/block – block IP
+
+POST /api/ip/unblock – unblock IP
+
+GET /api/ip/blocked – list blocked IPs
+
+POST /api/ip/whitelist – add to whitelist
+
+DELETE /api/ip/whitelist/:id – remove from whitelist
+
+Security Events
+
+GET /api/security/events – security events with filters
+
+GET /api/security/mitre – list MITRE ATT&CK techniques
+
+PATCH /api/security/:id – update event status
+
+POST /api/security/:id/block – block IP from event
+
+Incident Management
+
+GET /api/incidents – list all incidents
+
+GET /api/incidents/:id – get incident details
+
+POST /api/incidents – create incident
+
+PATCH /api/incidents/:id – update incident
+
+POST /api/incidents/:id/assign – assign to analyst
+
+POST /api/incidents/:id/comment – add comment
+
+Form Submissions
+
+GET /api/forms – form submissions with filters
+
+PATCH /api/forms/:id – update status (read/replied)
+
+DELETE /api/forms/:id – delete form
+
+GET /api/forms/export – export as CSV
+
+Drishti AI
+
+POST /api/ai/chat – send message to AI
+
+GET /api/ai/decisions – list AI decisions
+
+POST /api/ai/investigate/:ip – manually investigate IP
+
+GET /api/ai/summary – get daily summary
+
+POST /api/ai/settings – update assistant settings
+
+GET /api/ai/settings – get assistant settings
+
+DDoS
+
+GET /api/ddos/status – current DDoS status
+
+GET /api/ddos/events – DDoS event history
+
+POST /api/ddos/trigger – manual DDoS mitigation trigger
+
+Reports
+
+POST /api/reports/generate – generate PDF report
+
+GET /api/reports/:id – download report
+
+GET /api/reports – list generated reports
+
+POST /api/reports/schedule – schedule automated report
+
+Websites (Multi‑Tenant)
+
+GET /api/websites – list all websites
+
+POST /api/websites – add new website (AI setup)
+
+GET /api/websites/:id – get website details
+
+PATCH /api/websites/:id – update website
+
+DELETE /api/websites/:id – remove website
+
+POST /api/websites/:id/upload – upload files (AI processes)
+
+POST /api/websites/:id/sync-github – sync with GitHub
+
+GET /api/websites/:id/snippet – get tracking snippet
+
+POST /api/websites/:id/regenerate-key – regenerate API key
+
+Clients
+
+GET /api/clients – list all clients
+
+POST /api/clients – add new client
+
+GET /api/clients/:id – get client details
+
+PATCH /api/clients/:id – update client
+
+DELETE /api/clients/:id – delete client
+
+Tenant‑Aware Security
+
+GET /api/websites/:id/security – security events for this website
+
+GET /api/websites/:id/forms – form submissions for this website
+
+GET /api/websites/:id/stats – stats for this website
+
+POST /api/websites/:id/block – block IP for this website
+
+Client Dashboard (Tenant‑Specific)
+
+GET /api/client/stats – stats for their website
+
+GET /api/client/events – events for their website
+
+GET /api/client/security – security events for their website
+
+GET /api/client/forms – form submissions for their website
+
+GET /api/client/reports – reports for their website
+
+POST /api/client/settings – update their website settings
+
+Admin (Admin Only)
+
+GET /api/audit – admin audit logs
+
+GET /api/users – list all users
+
+POST /api/users – create user
+
+PATCH /api/users/:id – update user
+
+DELETE /api/users/:id – delete user
+
+API Tokens
+
+POST /api/tokens – generate API token
+
+GET /api/tokens – list tokens
+
+DELETE /api/tokens/:id – revoke token
+
+Compliance
+
+GET /api/compliance/gdpr – GDPR readiness report
+
+GET /api/compliance/dpdp – DPDP readiness report
+
+GET /api/compliance/logs – compliance audit logs
+
+Vulnerability Scanner
+
+GET /api/vulnerabilities – list vulnerabilities
+
+POST /api/vulnerabilities/scan – trigger new scan
+
+GET /api/vulnerabilities/:id – get scan details
+
+Auth
+POST /api/auth/login – get JWT
+
+POST /api/auth/logout – invalidate token
+
+GET /api/auth/me – current user info
+
+POST /api/auth/refresh – refresh token
+
+🗄️ Complete Database Schema (All Tables)
+sql
+-- 1. Events
+CREATE TABLE events (
+  id BIGSERIAL PRIMARY KEY,
+  website_id BIGINT REFERENCES websites(id),
+  session_id UUID,
+  event_type VARCHAR(30),
+  page_url TEXT,
+  event_data JSONB,
+  user_ip INET,
+  user_agent TEXT,
+  referrer TEXT,
+  timestamp TIMESTAMP DEFAULT NOW()
+);
+
+-- 2. Form Submissions
+CREATE TABLE form_submissions (
+  id BIGSERIAL PRIMARY KEY,
+  website_id BIGINT REFERENCES websites(id),
+  form_type VARCHAR(20),
+  session_id UUID,
+  user_ip INET,
+  user_agent TEXT,
+  data JSONB,
+  email VARCHAR(255),
+  name VARCHAR(255),
+  services TEXT,
+  message TEXT,
+  status VARCHAR(20) DEFAULT 'new',
+  created_at TIMESTAMP DEFAULT NOW(),
+  read_at TIMESTAMP,
+  replied_at TIMESTAMP
+);
+
+-- 3. Security Events (with MITRE ATT&CK)
+CREATE TABLE security_events (
+  id BIGSERIAL PRIMARY KEY,
+  website_id BIGINT REFERENCES websites(id),
+  event_type VARCHAR(50),
+  severity VARCHAR(20),
+  mitre_technique_id VARCHAR(20),
+  mitre_tactic VARCHAR(50),
+  user_ip INET,
+  user_agent TEXT,
+  session_id UUID,
+  url TEXT,
+  payload TEXT,
+  details JSONB,
+  is_blocked BOOLEAN DEFAULT FALSE,
+  status VARCHAR(20) DEFAULT 'new',
+  assigned_to VARCHAR(100),
+  investigation_notes TEXT,
+  resolution_notes TEXT,
+  escalated_at TIMESTAMP,
+  created_at TIMESTAMP DEFAULT NOW(),
+  is_resolved BOOLEAN DEFAULT FALSE,
+  resolved_at TIMESTAMP
+);
+
+-- 4. IP Block List
+CREATE TABLE ip_block_list (
+  id BIGSERIAL PRIMARY KEY,
+  website_id BIGINT REFERENCES websites(id),
+  ip INET NOT NULL,
+  reason VARCHAR(255),
+  blocked_by VARCHAR(100),
+  severity VARCHAR(20),
+  expires_at TIMESTAMP,
+  is_active BOOLEAN DEFAULT TRUE,
+  created_at TIMESTAMP DEFAULT NOW(),
+  unblocked_at TIMESTAMP,
+  unblocked_by VARCHAR(100),
+  unblock_reason VARCHAR(255)
+);
+
+-- 5. IP Whitelist
+CREATE TABLE ip_whitelist (
+  id BIGSERIAL PRIMARY KEY,
+  website_id BIGINT REFERENCES websites(id),
+  ip INET NOT NULL UNIQUE,
+  reason VARCHAR(255),
+  added_by VARCHAR(100),
+  expires_at TIMESTAMP,
+  is_active BOOLEAN DEFAULT TRUE,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- 6. IP Intel Cache
+CREATE TABLE ip_intel_cache (
+  ip INET PRIMARY KEY,
+  country VARCHAR(100),
+  region VARCHAR(100),
+  city VARCHAR(100),
+  latitude DECIMAL(10,6),
+  longitude DECIMAL(10,6),
+  isp VARCHAR(255),
+  organization VARCHAR(255),
+  as_number VARCHAR(50),
+  threat_score INTEGER DEFAULT 0,
+  abuse_confidence INTEGER DEFAULT 0,
+  total_reports INTEGER DEFAULT 0,
+  is_scanner BOOLEAN DEFAULT FALSE,
+  last_reported_at TIMESTAMP,
+  cached_at TIMESTAMP DEFAULT NOW()
+);
+
+-- 7. Users (RBAC)
+CREATE TABLE users (
+  id BIGSERIAL PRIMARY KEY,
+  username VARCHAR(50) UNIQUE,
+  password_hash TEXT,
+  email VARCHAR(255) UNIQUE,
+  role VARCHAR(20) DEFAULT 'viewer',
+  created_at TIMESTAMP DEFAULT NOW(),
+  last_login TIMESTAMP,
+  last_ip INET,
+  is_active BOOLEAN DEFAULT TRUE
+);
+
+-- 8. Audit Logs
+CREATE TABLE audit_logs (
+  id BIGSERIAL PRIMARY KEY,
+  website_id BIGINT REFERENCES websites(id),
+  admin_user VARCHAR(100),
+  action VARCHAR(100),
+  target VARCHAR(255),
+  details JSONB,
+  ip_address INET,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- 9. Incidents
+CREATE TABLE incidents (
+  id BIGSERIAL PRIMARY KEY,
+  website_id BIGINT REFERENCES websites(id),
+  title VARCHAR(255),
+  description TEXT,
+  severity VARCHAR(20),
+  status VARCHAR(20) DEFAULT 'new',
+  assigned_to VARCHAR(100),
+  event_ids BIGINT[],
+  investigation_notes TEXT,
+  resolution_notes TEXT,
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW(),
+  resolved_at TIMESTAMP
+);
+
+-- 10. API Tokens
+CREATE TABLE api_tokens (
+  id BIGSERIAL PRIMARY KEY,
+  token_hash TEXT UNIQUE,
+  name VARCHAR(100),
+  created_by VARCHAR(100),
+  scope VARCHAR(50),
+  expires_at TIMESTAMP,
+  last_used_at TIMESTAMP,
+  is_active BOOLEAN DEFAULT TRUE,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- 11. Saved Searches
+CREATE TABLE saved_searches (
+  id BIGSERIAL PRIMARY KEY,
+  user_id BIGINT,
+  name VARCHAR(100),
+  query JSONB,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- 12. Compliance Logs
+CREATE TABLE compliance_logs (
+  id BIGSERIAL PRIMARY KEY,
+  website_id BIGINT REFERENCES websites(id),
+  user_id BIGINT,
+  action VARCHAR(100),
+  data_type VARCHAR(50),
+  consent_given BOOLEAN,
+  ip_address INET,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+🛠️ Long‑Term Service Selection
+Service	Role	Free Tier	Why It Lasts
+GitHub	Code repository + Pages + Actions	Unlimited public repos, 2000 Actions min/mo	Established, no plans to limit
+Render	Backend API hosting	750 hours/month free	Plenty for 24/7
+Supabase	PostgreSQL + Auth	500 MB, 2 GB bandwidth	Data retention keeps within limits
+Vercel	Frontend hosting	Unlimited static, 100 GB bandwidth	Extremely generous
+ip‑api.com	Geolocation	45 req/min, 1000/day	Caching reduces external calls
+AbuseIPDB	Threat intel	1000 checks/day	Only used for new IPs
+GreyNoise	Scanner detection	20,000 requests/day	Much better than Shodan for SOC
+AlienVault OTX	Open threat intel	Unlimited, no key	Community-driven, very generous
+VirusTotal	IP/domain reputation	500 requests/day	Caching ensures low usage
+URLScan.io	Malicious content check	10,000 requests/day	Great for URL/IP checks
+DeepSeek API	AI model for Drishti AI	Free tier (generous)	Best free AI for SOC automation
+Sentry	Error tracking	5000 errors/month	Suitable for small project
+Slack / Telegram	Alerts	Free (unlimited)	No rate limits
+Gmail SMTP	Email alerts	Free (500 emails/day)	Good for notifications
+cron-job.org	Scheduled tasks	Unlimited	Reliable free cron service
+Better Stack	Uptime monitoring	50 checks/month	Enough for core services
+Cloudflare API	Auto-block at CDN	Free (unlimited)	Block IPs at network level
+✅ Total monthly cost: $0 – all services have stable, generous free tiers.
+
+🗑️ Data Retention Strategy
+Table	Retention Period	Cleanup Method
+events	90 days	Daily cron job
+security_events	180 days	Weekly cron job
+form_submissions	Forever	Only delete manually
+ip_block_list	Active forever; expired purged after 1 year	Monthly cleanup
+ip_intel_cache	7 days (refresh on access)	On-read refresh
+audit_logs	365 days	Daily cron job
+ai_sessions	30 days	Monthly cleanup
+incidents	Forever (archive resolved after 1 year)	Annual archive
+ddos_events	90 days	Daily cron job
+compliance_logs	7 years (regulatory)	Manual
+Implementation: Use cron-job.org to call /api/cleanup endpoint daily.
+
+📈 Monitoring & Maintenance (Automated)
+Task	Frequency	Tool
+Database cleanup	Daily	cron-job.org → /api/cleanup
+Refresh IP intel cache	On-access	Backend (auto)
+Uptime checks	3 minutes	Better Stack
+Error reporting	Real-time	Sentry
+Backup database	Daily	Supabase snapshots
+Vulnerability scan	Weekly	cron-job.org → /api/vulnerabilities/scan
+AI Daily Summary	Daily	cron-job.org → /api/ai/summary/send
+Security report generation	Weekly	cron-job.org → /api/reports/generate
+Compliance check	Monthly	cron-job.org → /api/compliance/check
+DDoS rule check	Every minute	cron-job.org → /api/ddos/check
+🔐 Security Hardening
+JWT with short expiry (1 hour) + refresh token
+
+Rate limiting on all API endpoints (per IP)
+
+CORS restricted to your domain(s)
+
+Helmet for security headers
+
+Input validation (Joi / Zod) on all endpoints
+
+SQL injection prevention via parameterised queries (Supabase)
+
+BCrypt for password hashing
+
+HTTPS enforced by hosting providers
+
+2FA optional (can be added later)
+
+RBAC (Role-Based Access Control)
+
+API Token authentication for external integrations
+
+Session management (force logout on password change)
+
+🛡️ Playbook Automation
+Playbook	Trigger	Action
+IP Block	IP threat score > 80	Block in DB + Cloudflare
+Admin Login Anomaly	Login from new city	Alert + Force password change
+SQLi Detection	SQL injection attempt	Block IP + Alert + Add to incident
+Brute Force	5+ failed logins	Block IP for 24h + Alert
+Form Spam	Multiple form submissions	Rate limit + CAPTCHA suggestion
+📦 Deployment & CI/CD
+Environment Variables
+Variable	Source	Used By
+DATABASE_URL	Supabase	Backend
+JWT_SECRET	Random string	Backend
+SUPABASE_ANON_KEY	Supabase	Frontend
+ABUSEIPDB_API_KEY	AbuseIPDB	Backend
+GREYNOISE_API_KEY	GreyNoise	Backend
+VIRUSTOTAL_API_KEY	VirusTotal	Backend
+DEEPSEEK_API_KEY	DeepSeek	Backend
+SLACK_WEBHOOK_URL	Slack	Backend
+TELEGRAM_BOT_TOKEN	Telegram	Backend
+SMTP_* (email)	Gmail app password	Backend
+CLOUDFLARE_API_TOKEN	Cloudflare	Backend
+CLOUDFLARE_ZONE_ID	Cloudflare	Backend
+🚀 Launch Checklist
+Supabase project created with all tables
+
+Backend deployed to Render (verify /api/health)
+
+Frontend deployed to Vercel (verify login page)
+
+Environment variables set in Render & Vercel
+
+Main website common.js updated with logging
+
+Form handlers updated to send to API
+
+AbuseIPDB, GreyNoise, VirusTotal API keys obtained
+
+DeepSeek API key obtained (for Drishti AI)
+
+Slack webhook and Telegram bot set up
+
+Cloudflare API token configured
+
+GitHub Actions workflows tested
+
+First admin user created
+
+Data retention cron job scheduled (cron-job.org)
+
+Uptime monitoring configured (Better Stack)
+
+Sentry error tracking enabled
+
+Drishti AI configured and tested
+
+Playbook automation tested
+
+Compliance dashboard populated
+
+Vulnerability scanner tested
+
+DDoS detection tested
+
+Multi‑tenant onboarding tested
+
+Client dashboard tested (tenant isolation)
+
+API key validation tested
+
+Branding applied to all pages (Drishti Kavach)
+
+✅ Summary – All Features
+Feature	Status
+Website Activity Logging	✅
+Form Submissions (Contact + Booking)	✅
+Security Threat Detection (SQLi, XSS, Honeypot)	✅
+IP Geolocation & Intelligence	✅
+IP Block/Unblock	✅
+Whitelist Management	✅
+MITRE ATT&CK Mapping	✅
+Incident Lifecycle	✅
+RBAC (Roles)	✅
+Advanced Search & Filters	✅
+Real‑time WebSocket Updates	✅
+Automated PDF Reports	✅
+Vulnerability Scanner	✅
+Compliance Dashboard (GDPR/DPDP)	✅
+API Token Management	✅
+Drishti AI Virtual Assistant	✅
+Auto‑Investigate & Auto‑Block	✅
+Daily AI Summaries	✅
+Playbook Automation (Cloudflare)	✅
+UEBA (Anomaly Detection)	✅
+Alert Correlation	✅
+DDoS Detection & Protection	✅
+Multi‑Tenant Support	✅
+AI‑Powered Auto‑Setup (File Upload)	✅
+Client Dashboard (Tenant‑Specific)	✅
+One‑Line SDK Snippet	✅
+API Key Management per Website	✅
+🔮 Future Enhancements (Optional)
+Advanced analytics (user funnels, conversion tracking)
+
+Machine Learning for anomaly detection
+
+Mobile app for SOC on the go
+
+Integration with more threat feeds
+
+Automated vulnerability remediation
+
+Custom dashboards for different roles
+
+Audit trail for compliance (SOC 2, ISO 27001)
+
+White‑label option for clients (re‑branding)
+
+🙏 Shloka for the Dashboard Login Page
+text
+                  दृष्टिः ज्ञानस्य प्रथमं द्वारम्
+                  रक्षति रक्षितः
+                  दृष्टिः रक्षति, रक्षा दृश्यते
+
+                  ─────────────────────────────
+
+                  "Vision is the first gateway to knowledge.
+                  The protector is protected by protecting.
+                  Vision protects, and protection is seen."
+
+                  ─────────────────────────────
+
+                  Drishti Kavach
+                  "The Vision Shield"
+
+                  See everything. Protect everything.
+This plan is ready for execution. Let me know when you want me to start writing the code! 🚀🕉️
+
+
+yet to be implemented:
+
+
+desing plan 
+To bring this Drishti Kavach vision to life, we need to translate that high-level concept into a concrete, actionable UI design specification. This design ensures that the "futuristic" aesthetic supports, rather than hinders, your security operations.  1. UI/UX Design System DetailsElementSpecificationVisual TreatmentGrid System12-Column ResponsiveFluid width with 1rem gutters between cards.Glassmorphismbackdrop-blurbg-white/5 (5% opacity), border border-white/10, shadow-lg.TypographyInter (UI) / JetBrains Mono (Logs)High legibility for technical data; 12px-14px font size.Color PaletteDeep Navy & AccentsNavy (#0a0a2e) base; Gold (#f5b041) for AI; Saffron (#ff9933) for alerts.  TransitionsEase-in-outduration-300 for hover states and modal animations.2. The "Live Globe Monitor" (Extra Feature)To elevate the "Global Shield" concept, add a 3D Interactive Globe module.Technology: Use Three.js with react-three-fiber or Globe.gl (highly recommended for performance).Visualization:Data Points: Real-time incoming traffic requests mapped as glowing arcs originating from the source IP country to your server location.Threat Layers: Malicious traffic appears as pulsing red arcs; normal traffic is a thin, subtle blue.Interaction: Users can click on a specific country or "pulse" to see the top 5 offending IPs, their threat score, and a "Quick Block" button.  Placement: This replaces the static 2D map in the center of the dashboard, serving as the "Command Center" focal point.  3. Detailed Component BreakdownNavigation Bar:Fixed at the top. Includes a "Live Pulse" indicator that flashes when data is actively being logged.  Top right: System status icons (Database, AI, Cloudflare) with green/yellow/red status indicators.  Incident Feed (Left Panel):Vertical scrolling list with Infinite Scroll.Severity levels (CRITICAL/WARNING/INFO) utilize a left-aligned colored border strip (Saffron/Gold/Blue) to denote urgency at a glance.  Drishti AI Console (Right Panel):Collapsible interaction window.User input at the bottom, AI response formatted as a "Message Bubble" with subtle typing animation.  Include a "Suggested Actions" button (e.g., "Block IP", "Clear Incident") directly within the chat bubble.  System Health Dashboard (Bottom Right):Progress bars for Database usage (500MB limit) and API Latency.  Small sparkline charts (Recharts) to show the last 60 minutes of load.  4. Implementation Checklist for DesignDefine Layout in React: Use Grid or Flex containers to lock the 4-panel structure (Feed, Globe, AI, Overview).  Apply Theme: Create a tailwind.config.js file that maps your brand colors as primary variables to keep the UI consistent.  Integrate Globe: Implement globe.gl as the central visual component, ensuring it receives real-time data via the WebSocket connection.  Interactive Elements: Ensure all buttons have a "glow" hover state (using box-shadow) to maintain the futuristic aesthetic.  Branding Footer: Place the Sanskrit shlokas in a small, low-opacity text box at the very bottom, keeping the central focus on the live data.  This design provides a professional, high-end look while maintaining the "All-Seeing" utility required for an effective SOC.  
+# 🕉️ Drishti Kavach – Implementation Requirements (Text Only)
+
+## 📋 What Needs to Be Implemented
+
+---
+
+### 1. Backend (Node.js + Express) – Remaining Work
+
+| Task | Description | Priority |
+| :--- | :--- | :--- |
+| **Email Proxy Route** | Create `/api/email/send` endpoint that uses EmailJS on the server (private key in `.env`). This completely hides the EmailJS private key from the frontend. | 🔴 Critical |
+| **Turnstile Verification** | Add Cloudflare Turnstile verification middleware to all public endpoints (`/api/email/send`, `/api/auth/login`). Reject requests without a valid token. | 🔴 Critical |
+| **CVE Scanner Service** | Build a service that queries NVD API daily for CVEs matching detected tech stacks. Store results in `vulnerabilities` table. | 🟠 High |
+| **Multi-Tenant Middleware** | Ensure ALL dashboard endpoints filter by `website_id` based on the logged-in user's role. Super Admin sees all; Admin/User see only their assigned website. | 🟠 High |
+| **Strict User Creation Logic** | In `POST /api/users`, enforce that only Super Admin can create users. Require `website_id` for Admin/User roles. Reject if missing. | 🟠 High |
+| **User Activity Tracking** | Log every user action (login, block, unblock, delete, settings change) to `events` table with `user_id` and `website_id`. | 🟡 Medium |
+| **Password Reset Flow** | Implement `/api/auth/reset-password` and `/api/auth/verify-otp` endpoints. Send OTP via email using the EmailJS proxy. | 🟡 Medium |
+| **DDoS Auto-Mitigation Job** | Set up a cron job that runs every minute to check traffic patterns. If thresholds are exceeded, trigger Cloudflare Under Attack mode and block IPs. | 🟡 Medium |
+| **AI Daily Summary** | Implement a cron job that runs at 8 AM daily. Calls DeepSeek API to summarize the last 24 hours of threats, sends to Slack/Telegram/Email. | 🟡 Medium |
+| **Data Retention Cleanup** | Implement `/api/cleanup` endpoint that deletes old data based on retention policy. Triggered daily via cron-job.org. | 🟡 Medium |
+| **Compliance Dashboard API** | Build `/api/compliance/gdpr` and `/api/compliance/dpdp` endpoints that check the system against compliance requirements. | 🟢 Low |
+| **Audit Log Middleware** | Log all admin actions (user creation, IP blocking, settings changes) to `audit_logs` table with `admin_user`, `action`, `target`, `details`, `ip_address`. | 🟢 Low |
+
+---
+
+### 2. Frontend (React + Vite) – Remaining Work
+
+| Task | Description | Priority |
+| :--- | :--- | :--- |
+| **Privacy Policy Page** | Create `PrivacyPolicy.jsx` – clear, user-friendly privacy policy explaining data collection, storage, and user rights. | 🔴 Critical |
+| **Terms & Conditions Page** | Create `TermsConditions.jsx` – clear terms of service for using the SOC dashboard. | 🔴 Critical |
+| **Turnstile Integration on Forms** | Add Cloudflare Turnstile widget to `contact.html`, `booking.html`, and `Login.jsx`. Site key from Cloudflare Dashboard. | 🔴 Critical |
+| **Vulnerabilities Page** | Create `Vulnerabilities.jsx` – display CVEs with severity badges, CVSS scores, affected components, publish date, and remediation suggestions. | 🟠 High |
+| **IP Unblocking Button** | Add one‑click unblock button in `IPManagement.jsx` that calls `POST /api/ip/unblock`. | 🟠 High |
+| **User Management Page** | Ensure `Users.jsx` shows: role dropdown (Admin/User), website dropdown (list of all active websites), and create user button. Only Super Admin can access full CRUD. Admin sees read‑only view. | 🟠 High |
+| **Forms Monitoring Page** | In `Forms.jsx`, add filters for form type (contact/booking), status (new/read/replied/spam), and date range. Include export to CSV button. | 🟡 Medium |
+| **Security Scorecard** | Create a widget that shows grade (A–F) for each website based on vulnerabilities, blocked attacks, and uptime. | 🟡 Medium |
+| **Login IP Geolocation Alert** | In `Login.jsx`, if user logs in from a new city/country, display a warning and send Slack alert. | 🟡 Medium |
+| **Session Timeout** | Implement auto‑logout after 30 minutes of inactivity. Show a countdown modal at 5 minutes remaining. | 🟡 Medium |
+| **Report Generation UI** | Add "Generate Report" button in `Reports.jsx` that calls `/api/reports/generate`. Show download link when ready. | 🟡 Medium |
+| **WebSocket Real‑time Updates** | In `DashboardLayout.jsx`, connect to Socket.io and listen for new security events, form submissions, and DDoS alerts. Update UI instantly. | 🟡 Medium |
+| **GDPR Data Export** | In `Settings.jsx`, add "Download My Data" button that exports all user data in JSON format. | 🟢 Low |
+| **Delete Account Flow** | In `Settings.jsx`, add "Request Account Deletion" button with confirmation modal. | 🟢 Low |
+
+---
+
+### 3. Database (Supabase) – Remaining Work
+
+| Task | Description | Priority |
+| :--- | :--- | :--- |
+| **Run Full Schema** | Execute all 21 table creation scripts in Supabase SQL Editor. | 🔴 Critical |
+| **Add website_id to Existing Tables** | Ensure `events`, `security_events`, `form_submissions`, `ip_block_list`, `ip_whitelist`, `audit_logs`, `incidents`, `compliance_logs`, `ai_decisions` all have `website_id` column with foreign key to `websites(id)`. | 🔴 Critical |
+| **Create Indexes** | Create indexes on `website_id` for all tenant‑aware tables for query performance. | 🔴 Critical |
+| **Seed Super Admin** | Insert Super Admin account (`whitehatwolf@quickkaam.in`) with role = `super_admin`. | 🔴 Critical |
+| **Create First Website** | Insert Quick Kaam's own website into `websites` table with API key. | 🔴 Critical |
+| **Create Admin Accounts** | Insert 2 Admin accounts, each assigned to a specific `website_id`. | 🟠 High |
+| **Set Up Row Level Security (RLS)** | Enable RLS in Supabase and create policies to ensure data isolation based on `website_id`. | 🟠 High |
+| **Configure Retention Policies** | Set up automated deletion jobs using Supabase functions or cron triggers. | 🟡 Medium |
+
+---
+
+### 4. Integration – Remaining Work
+
+| Task | Description | Priority |
+| :--- | :--- | :--- |
+| **Update common.js** | Change `sendEmailJS()` to call `/api/email/send` instead of EmailJS directly. Remove the base64 obfuscated key. | 🔴 Critical |
+| **Update contact.html** | Ensure form submission calls the new `sendEmailJS()` function. Add Turnstile widget. | 🔴 Critical |
+| **Update booking.html** | Ensure form submission calls the new `sendEmailJS()` function. Add Turnstile widget. | 🔴 Critical |
+| **CORS Configuration** | Set CORS in backend to allow only your frontend domains (`https://quickkaam.in`, `https://your-dashboard.vercel.app`). | 🔴 Critical |
+| **Environment Variables** | Add all required keys to Render environment: `EMAILJS_PRIVATE_KEY`, `TURNSTILE_SECRET_KEY`, `DEEPSEEK_API_KEY`, `ABUSEIPDB_API_KEY`, `GREYNOISE_API_KEY`, `VIRUSTOTAL_API_KEY`, `SLACK_WEBHOOK_URL`, `TELEGRAM_BOT_TOKEN`, `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ZONE_ID`, `SMTP_*`. | 🔴 Critical |
+| **Turnstile Site Key** | Add Cloudflare Turnstile site key to Vercel environment. | 🔴 Critical |
+
+---
+
+### 5. Automation & Monitoring – Remaining Work
+
+| Task | Description | Priority |
+| :--- | :--- | :--- |
+| **Data Retention Cron** | Set up cron-job.org to call `/api/cleanup` daily at 2 AM. | 🟡 Medium |
+| **AI Daily Summary Cron** | Set up cron-job.org to call `/api/ai/summary/send` daily at 8 AM. | 🟡 Medium |
+| **Vulnerability Scan Cron** | Set up cron-job.org to call `/api/vulnerabilities/scan` daily at 3 AM. | 🟡 Medium |
+| **DDoS Check Cron** | Set up cron-job.org to call `/api/ddos/check` every minute. | 🟡 Medium |
+| **Uptime Monitoring** | Set up Better Stack to monitor `/api/health` endpoint every 3 minutes. | 🟡 Medium |
+| **Sentry Error Tracking** | Add Sentry to both backend and frontend for real-time error reporting. | 🟡 Medium |
+
+---
+
+### 6. Security Hardening – Remaining Work
+
+| Task | Description | Priority |
+| :--- | :--- | :--- |
+| **2FA for Admin/Super Admin** | Implement TOTP-based 2FA for all Admin and Super Admin accounts. | 🟡 Medium |
+| **Email Verification on Signup** | Send 6-digit OTP to user's email during signup. Require verification before account activation. | 🟡 Medium |
+| **Rate Limiting on All Endpoints** | Apply `express-rate-limit` to all API endpoints (not just login). | 🔴 Critical |
+| **Helmet Security Headers** | Ensure Helmet is configured properly in `server.js`. | 🔴 Critical |
+| **CORS Restriction** | Ensure CORS is strictly restricted to approved domains. | 🔴 Critical |
+| **Input Validation with Zod** | Add Zod schemas for ALL API endpoints (not just email). | 🔴 Critical |
+| **SQL Injection Prevention** | Ensure all Supabase queries use parameterised queries (Supabase does this by default). | 🔴 Critical |
+| **BCrypt Password Hashing** | Ensure all passwords are hashed with BCrypt before storing. | 🔴 Critical |
+| **JWT Short Expiry** | Set access token expiry to 1 hour. Implement refresh token rotation. | 🔴 Critical |
+
+---
+
+## 💡 Suggestions for Improvement
+
+| Suggestion | Why It's Important | Priority |
+| :--- | :--- | :--- |
+| **Add 2FA for Admins** | Adds extra layer of security for critical accounts. Prevents account takeover even if password is compromised. | 🔴 High |
+| **Implement Session Timeout** | Prevents unauthorized access if user forgets to log out. 30 minutes is recommended. | 🔴 High |
+| **Add Login IP Geolocation Alerts** | If admin logs in from a new city/country, send Slack/Telegram alert immediately. | 🔴 High |
+| **Implement Password Reset Flow** | Users need a way to reset forgotten passwords. Email OTP or link is standard. | 🔴 High |
+| **Add reCAPTCHA/Turnstile to All Forms** | Prevents bot spam on contact and booking forms. Already planned – ensure it's actually done. | 🔴 High |
+| **Create Privacy Policy & Terms Pages** | Legal requirements for any website collecting user data. Must be easily accessible. | 🔴 High |
+| **Implement Data Export (GDPR)** | Users must be able to download their data. Required for GDPR compliance. | 🟡 Medium |
+| **Implement Account Deletion Flow** | Users must be able to request account deletion. Required for GDPR compliance. | 🟡 Medium |
+| **Add Weekly Security Digest** | Send clients a summary of attacks blocked and their website's health. Builds trust. | 🟡 Medium |
+| **Create Security Scorecard** | Show grade (A–F) for each website. Helps clients understand their security posture. | 🟡 Medium |
+| **Implement File Upload Security** | If clients upload website ZIP files, scan them with ClamAV or VirusTotal before processing. | 🟡 Medium |
+| **Add Dark Web Monitoring** | Check if client emails appear in data breaches. Use HaveIBeenPwned API. | 🟢 Low |
+| **Implement 2‑Way SMS Alerts** | Send critical alerts via SMS (Twilio/MSG91). Useful for DDoS emergencies. | 🟢 Low |
+| **Add Custom Alert Rules** | Allow users to create their own rules (e.g., "Alert me if 5 failed logins in 1 minute"). | 🟢 Low |
+| **Add MITRE ATT&CK Visualization** | Show detected attacks mapped to MITRE ATT&CK framework matrix. | 🟢 Low |
+| **Add CI/CD Pipeline** | Automate deployment when code is pushed to GitHub. Use GitHub Actions. | 🟢 Low |
+| **Add API Documentation (Swagger/OpenAPI)** | Auto‑generate API documentation for developers integrating with your SOC. | 🟢 Low |
+| **Add Dark Mode** | Provide dark mode toggle for the dashboard for better UX during night‑time monitoring. | 🟢 Low |
+
+---
+
+## 🎯 Summary of Critical Implementation Tasks
+
+| # | Task | Category |
+| :--- | :--- | :--- |
+| 1 | Run full database schema (21 tables) | Database |
+| 2 | Add `website_id` to all tenant‑aware tables | Database |
+| 3 | Seed Super Admin account | Database |
+| 4 | Create `/api/email/send` route (EmailJS proxy) | Backend |
+| 5 | Add Turnstile verification to all public endpoints | Backend |
+| 6 | Implement CVE scanner service | Backend |
+| 7 | Implement multi‑tenant middleware (website_id isolation) | Backend |
+| 8 | Implement strict user creation logic (only Super Admin) | Backend |
+| 9 | Add rate limiting to all endpoints | Backend |
+| 10 | Add Helmet + CORS to backend | Backend |
+| 11 | Create Privacy Policy page | Frontend |
+| 12 | Create Terms & Conditions page | Frontend |
+| 13 | Add Turnstile to contact.html, booking.html, Login.jsx | Frontend |
+| 14 | Update common.js to use proxy endpoint | Integration |
+| 15 | Set all environment variables in Render | Deployment |
+| 16 | Set up cron jobs (cleanup, AI summary, vulnerability scan, DDoS check) | Automation |
+| 17 | Set up uptime monitoring | Monitoring |
+| 18 | Test all flows (login, forms, IP blocking, unblocking, CVE scanning) | Testing |
+| 19 | Deploy backend to Render | Deployment |
+| 20 | Deploy frontend to Vercel | Deployment |
+| 21 | Apply Drishti Kavach branding to all pages | Branding |
+| 22 | Add Sanskrit shlokas to login page and dashboard footer | Branding |
+
+---
+
+**Note:** This is a comprehensive list. The critical items (🔴) must be completed before the system can be considered secure and production‑ready. All other items (🟠, 🟡, 🟢) can be implemented in subsequent phases.
