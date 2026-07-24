@@ -14,10 +14,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- ===== DRISHTI KAVACH SDK CONFIG ===== -->
+  <!-- Use relative path to avoid CORS issues and ensure requests work behind proxy -->
   <script>
     window.__DK_API_KEY  = 'dk_fc370748404c447454d76ff96f347075ed1c4930d941e80d';
-    window.__DK_SITE_ID  = '1'; // Replace with actual ID if using UUIDs
-    window.__DK_API_URL  = 'https://drishti-kavach-backend.onrender.com/api';
+    window.__DK_SITE_ID  = '1';
+    window.__DK_API_URL  = '/api'; // Relative path - works with same-origin requests
   </script>
   
   <!-- ===== FAVICON (Browser Tab Logo) ===== -->
@@ -48,7 +49,7 @@
   <meta name="twitter:image" content="https://quickkaam.in/Images/QK%20WEB.png" />
 
   <!-- ===== UPDATED CSP WITH GOOGLE ALLOWED ===== -->
-  <meta name="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https://api.emailjs.com https://api.countapi.xyz https://www.google-analytics.com; frame-ancestors 'none'; upgrade-insecure-requests;" />
+  <meta name="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https://drishti-kavach-backend.onrender.com https://api.emailjs.com https://api.countapi.xyz https://www.google-analytics.com; frame-ancestors 'none'; upgrade-insecure-requests;" />
   
   <meta name="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), bluetooth=(), xr-spatial-tracking=()" />
   <meta name="X-XSS-Protection" content="1; mode=block" />
