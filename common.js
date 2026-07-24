@@ -799,16 +799,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var endpoint = DK_API_URL.replace(/\/api$/, '') + '/api/sdk/engagement';
 
-      if (navigator.sendBeacon) {
-        navigator.sendBeacon(endpoint, new Blob([payload], { type: 'application/json' }));
-      } else {
-        fetch(endpoint, {
-          method:   'POST',
-          headers:  { 'Content-Type': 'application/json', 'X-API-Key': DK_API_KEY },
-          body:     payload,
-          keepalive: true,
-        }).catch(function () {});
-      }
+      // Use fetch with keepalive which is reliable in modern browsers for exit events
+      // and properly handles CORS preflights (unlike sendBeacon with JSON blobs)
+      fetch(endpoint, {
+        method:   'POST',
+        headers:  { 'Content-Type': 'application/json', 'X-API-Key': DK_API_KEY },
+        body:     payload,
+        keepalive: true,
+      }).catch(function () {});
+
       log('[DK SDK] Event sent:', eventType, data);
     } catch (e) {
       // Silent fail — never break the page
@@ -825,13 +824,37 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // ── Track Time on Page (fire on page unload) ─────────────────────
+  // ── Track Time on Page & Session End ─────────────────────────────
   var pageStart = Date.now();
-  window.addEventListener('beforeunload', function () {
+  var lastSentDuration = 0;
+
+  function sendTimeOnPage(isExit) {
     var duration = Math.round((Date.now() - pageStart) / 1000);
-    if (duration > 0) {
+    // Only send if duration increased significantly
+    if (duration > lastSentDuration) {
       dkSend('time_on_page', { url: window.location.href, duration: duration });
+      lastSentDuration = duration;
     }
+    if (isExit) {
+      dkSend('session_end', { url: window.location.href, duration: duration });
+    }
+  }
+
+  // Periodic heartbeat every 30 seconds
+  setInterval(function() {
+    sendTimeOnPage(false);
+  }, 30000);
+
+  // Modern exit tracking using visibilitychange
+  document.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'hidden') {
+      sendTimeOnPage(true);
+    }
+  });
+
+  // Fallback for older browsers
+  window.addEventListener('beforeunload', function () {
+    sendTimeOnPage(true);
   });
 
   // ── Track Scroll Depth ───────────────────────────────────────────
