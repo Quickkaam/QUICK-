@@ -14,11 +14,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- ===== DRISHTI KAVACH SDK CONFIG ===== -->
-  <!-- Use relative path to avoid CORS issues and ensure requests work behind proxy -->
+  <!-- Use absolute URL for cross-origin requests -->
   <script>
     window.__DK_API_KEY  = 'dk_fc370748404c447454d76ff96f347075ed1c4930d941e80d';
     window.__DK_SITE_ID  = '1';
-    window.__DK_API_URL  = '/api'; // Relative path - works with same-origin requests
+    window.__DK_API_URL  = 'https://drishti-kavach-backend.onrender.com/api';
   </script>
   
   <!-- ===== FAVICON (Browser Tab Logo) ===== -->
