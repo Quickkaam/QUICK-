@@ -766,7 +766,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // ── Config ──────────────────────────────────────────────────────
   var DK_API_URL  = window.__DK_API_URL  || API_BASE;
   var DK_API_KEY  = window.__DK_API_KEY  || 'e8cc3c520ac491964ae44f7730860b1d8ae069dac422993dc8c3926a7af06892';
-  var DK_SITE_ID  = window.__DK_SITE_ID  || '1';
+  var DK_SITE_ID  = parseInt(window.__DK_SITE_ID || '1', 10);
 
   // Don't run if not configured
   if (!DK_API_KEY || !DK_SITE_ID) {
@@ -914,4 +914,4 @@ document.addEventListener('DOMContentLoaded', function() {
   window.__dk = { sessionId: sessionId, send: dkSend };
   log('[DK SDK] Initialized. Session:', sessionId);
 
-})();
+})();
