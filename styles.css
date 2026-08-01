@@ -7406,10 +7406,10 @@ input#toggle-wave:checked ~ .container .water-button {
 
 .team-grid-5 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   justify-items: center;
-  max-width: 1000px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 40px 0 0;
 }
@@ -7489,30 +7489,30 @@ input#toggle-wave:checked ~ .container .water-button {
 /* Responsive */
 @media (max-width: 1024px) {
   .team-grid-5 {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
   }
 }
 
 @media (max-width: 768px) {
   .team-grid-5 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
     padding: 20px 0 0;
   }
   .team-grid-5 .team-member {
-    padding: 30px 12px 20px;
+    padding: 20px 8px 16px;
   }
   .team-grid-5 .team-member .team-photo-placeholder {
-    width: 80px;
-    height: 80px;
-    font-size: 2rem;
+    width: 70px;
+    height: 70px;
+    font-size: 1.6rem;
   }
   .team-grid-5 .team-member h4 {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
   .team-grid-5 .team-member span {
-    font-size: 0.72rem;
+    font-size: 0.65rem;
   }
 }
 
@@ -9095,8 +9095,8 @@ input#toggle-wave:checked ~ .container .water-button {
   }
   
   .team-grid-5 {
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 16px !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 10px !important;
   }
   
   .team-grid-5 .team-member .team-photo-placeholder {

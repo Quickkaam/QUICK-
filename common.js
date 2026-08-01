@@ -238,11 +238,16 @@ function submitForm(type, data) {
     services: data.services || '',
     message: data.message || '',
     data: data,
+    // Include API key in body as fallback for sendBeacon which can't send custom headers
+    api_key: window.__DK_API_KEY || '',
   };
 
-  fetch(`${API_BASE}/forms`, {
+  fetch(`${API_BASE}/sdk/form`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': window.__DK_API_KEY || '',
+    },
     body: JSON.stringify(payload),
   }).catch(() => { /* silently ignore */ });
 }
@@ -760,7 +765,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // ── Config ──────────────────────────────────────────────────────
   var DK_API_URL  = window.__DK_API_URL  || API_BASE;
-  var DK_API_KEY  = window.__DK_API_KEY  || 'dk_fc370748404c447454d76ff96f347075ed1c4930d941e80d';
+  var DK_API_KEY  = window.__DK_API_KEY  || 'e8cc3c520ac491964ae44f7730860b1d8ae069dac422993dc8c3926a7af06892';
   var DK_SITE_ID  = window.__DK_SITE_ID  || '1';
 
   // Don't run if not configured
